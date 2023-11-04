@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="benefits-section">
     <h3>Преимущества работать с нами</h3>
     <div>
       <div>
@@ -27,6 +27,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "assets/scss/_variables";
 
+.benefits-section{
+  margin: $section-padding-desktop;
+}
 </style>

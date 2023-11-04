@@ -1,19 +1,21 @@
 <template>
   <header>
     <div class="header__logo">
-      <img :src="Logo">
-      <span>Домострой</span>
+      <a href="#">
+        <img :src="Logo" alt="Домострой лого"/>
+        <span>Домострой</span>
+      </a>
     </div>
-    <div class="header__menu">
+    <nav class="header__menu">
       <ul role="list" class="header__menu-container">
-        <li class="header__menu-item">Проекты</li>
-        <li class="header__menu-item">Ипотека</li>
-        <li class="header__menu-item">Виды работ</li>
-        <li class="header__menu-item">Контакты</li>
+        <li class="header__menu-item"><a href="#">Проекты</a></li>
+        <li class="header__menu-item"><a href="#">Ипотека</a></li>
+        <li class="header__menu-item"><a href="#">Виды работ</a></li>
+        <li class="header__menu-item"><a href="#">Контакты</a></li>
       </ul>
-    </div>
-    <icon></icon>
-    <icon></icon>
+    </nav>
+    <i></i>
+    <i></i>
     <button class="button-primary">Обратная связь</button>
   </header>
 </template>
@@ -35,7 +37,7 @@ header {
   justify-content: space-between;
   width: -webkit-fill-available;
 
-  .header__logo {
+  .header__logo a{
     display: flex;
     gap: 8px;
     align-items: center;
@@ -47,7 +49,8 @@ header {
     &-container {
       display: flex;
       gap: 44px;
-      li{
+
+      li {
         cursor: pointer;
       }
     }

@@ -1,12 +1,12 @@
 <template>
-  <section>
-    <h2>Контакты</h2>
-  </section>
+  <div>
+    
+  </div>
 </template>
 
 <script>
 export default {
-  name: "ContactsSection"
+  name: "Slider"
 }
 </script>
 
