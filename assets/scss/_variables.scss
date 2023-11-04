@@ -10,22 +10,26 @@ $grid-breakpoints: (
 
 $header-width-desktop: 110px;
 
-
 $section-padding-mobile: 3rem;
 $section-padding-desktop: 15rem;
 
 //Font size
-$h1-desktop: 68px;
-$h1-mobile: 28px;
+:root {
+  --base-fs: 12px;
 
-$h2-desktop: 48px;
-$h2-mobile: 20px;
+  --fs-h1: 2.3333rem;
+  --fs-h2: 1.6667rem;
+  --fs-h3: 1.3333rem;
+  --fs-h-capture: 1rem;
+  --fs-body: 1rem;
+}
 
-$h3-desktop: 32px;
-$h3-mobile: 16px;
-
-$h-capture-desktop: 18px;
-$h-capture-mobile: 12px;
-
-$font-desktop: 16px;
-$font-mobile: 12px;
+@media (min-width: 50em) {
+  :root {
+    --fs-h1: 5.6667rem;
+    --fs-h2: 4rem;
+    --fs-h3: 2.6667rem;
+    --fs-h-capture: 1.5rem;
+    --fs-body: 1.3333rem;
+  }
+}
