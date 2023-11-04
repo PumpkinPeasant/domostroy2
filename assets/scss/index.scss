@@ -1,10 +1,48 @@
 @import "assets/scss/_variables";
 @import "assets/scss/_colors";
 
+/* CSS Reset */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 *, html, body {
   margin: 0;
   padding: 0;
+  font: inherit;
 }
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  height: 100%;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* CSS Reset */
 
 body {
   background-color: #FEFEFF;
