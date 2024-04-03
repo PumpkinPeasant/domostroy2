@@ -6,18 +6,18 @@
         <div class="item">
           <img class="icon" alt="" :src="Quality">
           <p class="h-capture">Качество</p>
-          <p>В работе мы полностью придерживаемся стандартов качества, и осуществляем любые Ваши задумки. </p>
+          <p class="p-body">В работе мы полностью придерживаемся стандартов качества, и осуществляем любые Ваши задумки. </p>
         </div>
         <div class="item">
           <img class="icon" alt="" :src="Contract">
           <p class="h-capture">Договоры</p>
-          <p>Договоры заключаются с фиксированной суммой. Подготовим всю рабочую документацию и обоснуем каждый
+          <p class="p-body">Договоры заключаются с фиксированной суммой. Подготовим всю рабочую документацию и обоснуем каждый
             потраченный рубль.</p>
         </div>
         <div class="item">
           <img class="icon" alt="" :src="Calendar">
           <p class="h-capture">Сроки</p>
-          <p>Мы всегда указываем реальные сроки и придерживаемся их! А также скидываем ежедневные отчеты в
+          <p class="p-body">Мы всегда указываем реальные сроки и придерживаемся их! А также скидываем ежедневные отчеты в
             онлайн-чат.</p>
         </div>
       </div>
@@ -37,7 +37,7 @@ import Calendar from '~/assets/icons/calendar.svg'
 @import "assets/scss/_colors";
 
 .benefits-section {
-  height: 200px;
+  height: 300px;
   position: relative;
 
   .benefits-card {
@@ -46,22 +46,26 @@ import Calendar from '~/assets/icons/calendar.svg'
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: -20%;
+    top: -25%;
     left: 11.5em;
     right: 11.5em;
     padding: 2em;
 
     .items {
       display: flex;
-
+      gap: 3em;
       .item {
 
 
-        .icon{
+        .icon {
           height: 80px;
           width: 80px;
         }
       }
+    }
+
+    h3 {
+      margin-bottom: 0.2em;
     }
   }
 }
