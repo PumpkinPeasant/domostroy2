@@ -1,7 +1,7 @@
 <template>
-  <header>
+  <header :class="navClass">
     <div class="header__logo">
-      <NuxtLink to="#top">
+      <NuxtLink to="/">
         <img :src="Logo" alt="Домострой лого"/>
         <span>Домострой</span>
       </NuxtLink>
@@ -13,8 +13,7 @@
             :key="link.to"
             :to="link.to"
             class="header__menu-item"
-            :class="{active: router.currentRoute.value.hash === link.to}"
-        >
+            :class="{active: router.currentRoute.value.hash === link.to}">
           {{ link.pageTitle }}
         </NuxtLink>
       </ul>
@@ -23,7 +22,8 @@
   </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import {ref} from 'vue'
 import Logo from '~/assets/images/logo.svg'
 
 const router = useRouter();
@@ -46,21 +46,44 @@ const links = ref([
   }
 ]);
 
+const navClass = ref('')
 
+onMounted(() => {
+  {
+    window.addEventListener("scroll", handleScroll);
+  }
+})
+
+onBeforeUnmount(() => {
+  {
+    window.removeEventListener("scroll", handleScroll);
+  }
+})
+
+function handleScroll(event) {
+  if (event && window.scrollY > 0) {
+    navClass.value = "nav-scrolled";
+  } else {
+    navClass.value = "";
+  }
+}
 </script>
 
 <style scoped lang="scss">
 @import "assets/scss/_variables";
 
 header {
-  z-index: 1;
+  width: 100%;
+  background-color: transparent;
   position: fixed;
-  height: $header-width-desktop;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: -webkit-fill-available;
-  background-color: #F8FEFE;
+  transition: 0.6s;
+  z-index: 1;
+
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
   .header__logo a {
     display: flex;
@@ -86,7 +109,15 @@ header {
   .active {
     color: #282A2E;
   }
-
 }
 
+.toggleButton {
+  display: none;
+}
+
+.nav-scrolled {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #F8FEFE;
+}
 </style>
