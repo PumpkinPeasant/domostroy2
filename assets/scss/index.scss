@@ -75,11 +75,16 @@ h3 {
 }
 
 button {
-  padding: 16px 20px;
+  padding: 12px 30px;
   font-size: var(--fs-body);
+  border: none;
+  transition: transform 0.2s ease;
 }
 
-/* Utils */
+button:active {
+  transform: translateY(2px);
+}
+
 
 .button-primary {
   background-color: $dark-primary;
