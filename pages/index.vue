@@ -1,10 +1,10 @@
 <template>
   <MainSection id="top"/>
-  <BenefitsSection/>
-  <ProjectsSection id="projects"/>
-  <MortgageSection id="mortgage"/>
-  <ServicesSection id="services"/>
-  <ContactsSection id="contacts"/>
+  <BenefitsSection />
+  <ProjectsSection id="projects" class="section"/>
+  <MortgageSection id="mortgage" class="section"/>
+  <ServicesSection id="services" class="section"/>
+  <ContactsSection id="contacts" class="section"/>
 </template>
 
 <script setup>
@@ -18,5 +18,7 @@ import ContactsSection from "~/components/index/ContactsSection.vue";
 </script>
 
 <style scoped>
-
+.section{
+  margin-bottom: 100px;
+}
 </style>
