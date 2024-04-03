@@ -3,32 +3,46 @@
     <div class="benefits-card card-shadow">
       <h3>Преимущества работать с нами</h3>
       <div class="items">
-        <div class="item">
-          <img class="icon" alt="" :src="Quality">
-          <p class="h-capture">Качество</p>
-          <p class="p-body">В работе мы полностью придерживаемся стандартов качества, и осуществляем любые Ваши задумки. </p>
-        </div>
-        <div class="item">
-          <img class="icon" alt="" :src="Contract">
-          <p class="h-capture">Договоры</p>
-          <p class="p-body">Договоры заключаются с фиксированной суммой. Подготовим всю рабочую документацию и обоснуем каждый
-            потраченный рубль.</p>
-        </div>
-        <div class="item">
-          <img class="icon" alt="" :src="Calendar">
-          <p class="h-capture">Сроки</p>
-          <p class="p-body">Мы всегда указываем реальные сроки и придерживаемся их! А также скидываем ежедневные отчеты в
-            онлайн-чат.</p>
+        <div
+            v-for="(benefit, index) of benefits"
+            :key="index"
+            class="item"
+        >
+          <img
+              class="icon"
+              :src="benefit.img"
+              :alt="benefit.img"
+          >
+          <p class="h-capture">{{ benefit.title }}</p>
+          <p class="p-body">{{ benefit.description }}</p>
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import Quality from '~/assets/icons/quality.svg'
 import Contract from '~/assets/icons/contract.svg'
 import Calendar from '~/assets/icons/calendar.svg'
+
+const benefits = ref([
+  {
+    img: Quality,
+    title: 'Качество',
+    description: 'В работе мы полностью придерживаемся стандартов качества, и осуществляем любые Ваши задумки.'
+  },
+  {
+    img: Contract,
+    title: 'Договоры',
+    description: 'Договоры заключаются с фиксированной суммой. Подготовим всю рабочую документацию и обоснуем каждый потраченный рубль.'
+  },
+  {
+    img: Calendar,
+    title: 'Сроки',
+    description: 'Мы всегда указываем реальные сроки и придерживаемся их! А также скидываем ежедневные отчеты в онлайн-чат.'
+  }
+])
 
 </script>
 
@@ -49,23 +63,27 @@ import Calendar from '~/assets/icons/calendar.svg'
     top: -25%;
     left: 11.5em;
     right: 11.5em;
-    padding: 2em;
+    padding: 25px 50px;
+    border-radius: 5px;
 
     .items {
       display: flex;
       gap: 3em;
+
       .item {
-
-
+        flex-grow: 1;
+        flex-basis: 0;
         .icon {
           height: 80px;
           width: 80px;
+          margin-bottom: 15px;
         }
       }
     }
 
     h3 {
-      margin-bottom: 0.2em;
+      margin-bottom: 0.8em;
+      letter-spacing: 1px;
     }
   }
 }

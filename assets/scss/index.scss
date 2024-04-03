@@ -72,7 +72,8 @@ h3, .h3 {
 .h-capture {
   font-size: var(--fs-h-capture);
   font-weight: 700;
-  color: $grey-secondary;
+  color: $dark-primary;
+  margin-bottom: 8px ;
 }
 
 button {
@@ -104,6 +105,7 @@ button:active {
 
 .p-body {
   font-size: var(--fs-body);
+  color: $grey-secondary;
 }
 
 .card-shadow {
