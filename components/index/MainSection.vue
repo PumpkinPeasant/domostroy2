@@ -62,6 +62,7 @@ h1 {
 
     .symbol {
       color: $red-accent;
+      margin-left: 5px;
     }
   }
 }
