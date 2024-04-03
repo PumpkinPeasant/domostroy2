@@ -1,27 +1,51 @@
 <template>
   <header>
     <div class="header__logo">
-      <a href="#">
+      <NuxtLink to="#top">
         <img :src="Logo" alt="Домострой лого"/>
         <span>Домострой</span>
-      </a>
+      </NuxtLink>
     </div>
     <nav class="header__menu">
-      <ul role="list" class="header__menu-container">
-        <li class="header__menu-item"><a href="#">Проекты</a></li>
-        <li class="header__menu-item"><a href="#">Ипотека</a></li>
-        <li class="header__menu-item"><a href="#">Виды работ</a></li>
-        <li class="header__menu-item"><a href="#">Контакты</a></li>
+      <ul class="header__menu-container">
+        <NuxtLink
+            v-for="link of links"
+            :key="link.to"
+            :to="link.to"
+            class="header__menu-item"
+            :class="{active: router.currentRoute.value.hash === link.to}"
+        >
+          {{ link.pageTitle }}
+        </NuxtLink>
       </ul>
     </nav>
-    <i></i>
-    <i></i>
     <button class="button-primary">Обратная связь</button>
   </header>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import Logo from '~/assets/images/logo.svg'
+
+const router = useRouter();
+const links = ref([
+  {
+    pageTitle: "Проекты",
+    to: "#projects",
+  },
+  {
+    pageTitle: "Ипотека",
+    to: "#mortgage",
+  },
+  {
+    pageTitle: "Виды работ",
+    to: "#services",
+  },
+  {
+    pageTitle: "Контакты",
+    to: "#contacts",
+  }
+]);
+
 
 </script>
 
@@ -36,8 +60,9 @@ header {
   align-items: center;
   justify-content: space-between;
   width: -webkit-fill-available;
+  background-color: #F8FEFE;
 
-  .header__logo a{
+  .header__logo a {
     display: flex;
     gap: 8px;
     align-items: center;
@@ -49,12 +74,19 @@ header {
     &-container {
       display: flex;
       gap: 44px;
+    }
 
-      li {
-        cursor: pointer;
-      }
+    &-item {
+      cursor: pointer;
+      font-size: 16px;
+      color: #77797D;
     }
   }
+
+  .active {
+    color: #282A2E;
+  }
+
 }
 
 </style>
