@@ -86,7 +86,7 @@ header {
   align-items: center;
   justify-content: space-between;
   transition: 0.6s;
-  z-index: 1;
+  z-index: 3;
 
   padding-top: 4rem;
   padding-bottom: 4rem;

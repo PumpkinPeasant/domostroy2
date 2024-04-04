@@ -49,7 +49,7 @@ main {
 }
 
 .main {
-  z-index: 10;
+  z-index: 2;
 
   p {
     margin-bottom: 30px;
