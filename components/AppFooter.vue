@@ -1,19 +1,19 @@
 <template>
   <footer>
     <section class="footer-info">
-      <NuxtLink to="#projects" class="text">Проекты</NuxtLink>
-      <NuxtLink to="#mortgage" class="text">Ипотека</NuxtLink>
-      <NuxtLink to="#services" class="text">Виды работ</NuxtLink>
-      <NuxtLink to="#contacts" class="text">Контакты</NuxtLink>
-      <p class="text">Написать нам: <a href="mailto:domostroi@lenta.ru" class="email">domostroi@lenta.ru</a></p>
+      <NuxtLink to="#projects" class="text link">Проекты</NuxtLink>
+      <NuxtLink to="#mortgage" class="text link">Ипотека</NuxtLink>
+      <NuxtLink to="#services" class="text link">Виды работ</NuxtLink>
+      <NuxtLink to="#contacts" class="text link">Контакты</NuxtLink>
+      <p class="text">Написать нам: <a href="mailto:domostroi@lenta.ru" class="email link">domostroi@lenta.ru</a></p>
       <NuxtLink class="text"></NuxtLink>
       <div class="icon">
-        <a href="https://t.me/domostroi29">
+        <a href="https://t.me/domostroi29" class="icon-link">
           <img src="@/assets/icons/telegram.svg" alt="telegram">
         </a>
       </div>
       <div class="icon">
-        <a href="https://vk.com/domostroi_29">
+        <a href="https://vk.com/domostroi_29" class="icon-link">
           <img src="@/assets/icons/vk.svg" alt="vk">
         </a>
       </div>
@@ -28,7 +28,9 @@
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "assets/scss/_colors";
+
 .footer-info {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 1fr;
@@ -38,25 +40,45 @@
   margin-bottom: 40px;
   align-items: center;
 }
-.text{
+
+.text {
   font-size: 16px;
-  color: #77797D;
+  color: $grey-secondary;
 }
-.email{
+
+.link {
+  &:hover, &:active {
+    color: $dark-primary;
+    font-weight: 600;
+  }
+}
+
+.email {
   color: #282A2E;
 }
-.footer-logo{
-  height:50px;
+
+.footer-logo {
+  height: 40px;
   background-color: #282A2E;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.icon{
+
+.icon {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+
+  .icon-link {
+    transform-origin: center center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover, &:active {
+      transform: scale(1.2);
+    }
+  }
 }
 </style>
