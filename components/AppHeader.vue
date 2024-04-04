@@ -76,6 +76,7 @@ function handleScroll(event) {
 
 <style scoped lang="scss">
 @import "assets/scss/_variables";
+@import "assets/scss/_colors";
 
 header {
   width: 100%;
@@ -107,12 +108,12 @@ header {
     &-item {
       cursor: pointer;
       font-size: 16px;
-      color: #77797D;
+      color: $grey-secondary;
     }
   }
 
   .active {
-    color: #282A2E;
+    color: $dark-primary;
   }
 }
 
@@ -123,7 +124,7 @@ header {
 .nav-scrolled {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: #FEFEFF;
+  background-color: $background;
 }
 
 .contact_section {
@@ -132,8 +133,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 12px 30px;
-  background-color: black;
-  color: white;
+  background-color: $dark-primary;
+  color: $white;
   font-size: 16px;
 
   img {

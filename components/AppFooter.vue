@@ -54,12 +54,12 @@
 }
 
 .email {
-  color: #282A2E;
+  color: $dark-primary;
 }
 
 .footer-logo {
   height: 40px;
-  background-color: #282A2E;
+  background-color: $dark-primary;
   display: flex;
   flex-direction: row;
   justify-content: center;
