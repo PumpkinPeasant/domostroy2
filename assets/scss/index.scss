@@ -51,6 +51,12 @@ body {
 
 main, section, header {
   padding: 0 11.5em;
+  @media (max-width: 1300px) {
+    padding: 0 5em;
+  }
+  @media (max-width: 900px) {
+    padding: 0 1em;
+  }
 }
 
 h1 {

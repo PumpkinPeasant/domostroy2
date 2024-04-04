@@ -13,8 +13,10 @@
               :src="benefit.img"
               :alt="benefit.img"
           >
-          <p class="h-capture">{{ benefit.title }}</p>
-          <p class="p-body">{{ benefit.description }}</p>
+          <div>
+            <p class="h-capture">{{ benefit.title }}</p>
+            <p class="p-body">{{ benefit.description }}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -66,24 +68,50 @@ const benefits = ref([
     padding: 25px 50px;
     border-radius: 5px;
 
+    @media (max-width: 1300px) {
+      left: 5em;
+      right: 5em;
+      padding: 25px 15px;
+    }
+
+    @media (max-width: 900px) {
+      left: 2em;
+      right: 2em;
+    }
+
     .items {
       display: flex;
       gap: 3em;
+      @media (max-width: 900px) {
+        flex-direction: column;
+      }
 
       .item {
         flex-grow: 1;
         flex-basis: 0;
+        @media (max-width: 900px) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+
         .icon {
           height: 80px;
           width: 80px;
           margin-bottom: 15px;
+          @media (max-width: 900px) {
+            margin: 0 15px 0 0;
+            height: 50px;
+            width: 50px;
+          }
         }
       }
     }
 
     h3 {
       margin-bottom: 0.8em;
-      letter-spacing: 1px;
+      letter-spacing: -0.8px;
     }
   }
 }

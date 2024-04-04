@@ -10,15 +10,15 @@
       <div class="numbers">
         <div class="number">
           <span class="digits h3">100<span class="symbol">+</span></span>
-          <span>Договоров ежегодно</span>
+          <span class="description">Договоров ежегодно</span>
         </div>
         <div class="number">
           <span class="digits h3">700<span class="symbol">+</span></span>
-          <span>Готовых проектов</span>
+          <span class="description">Готовых проектов</span>
         </div>
         <div class="number">
           <span class="digits h3">16<span class="symbol">+</span></span>
-          <span>Лет на рынке</span>
+          <span class="description">Лет на рынке</span>
         </div>
       </div>
     </div>
@@ -53,6 +53,7 @@ main {
 
   p {
     margin-bottom: 30px;
+    color: #77797D;
   }
 }
 
@@ -77,6 +78,11 @@ h1 {
     .symbol {
       color: $red-accent;
       margin-left: 5px;
+    }
+
+    .description{
+      color: $grey-secondary;
+      font-size: 16px;
     }
   }
 }
