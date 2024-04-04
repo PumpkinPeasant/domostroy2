@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="card-info_action">
-          <button class="button-primary">
+          <button class="button-secondary">
             Подробнее
           </button>
           <p>{{ service.price }} </p>
