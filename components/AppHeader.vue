@@ -55,6 +55,7 @@ const navClass = ref('')
 onMounted(() => {
   {
     window.addEventListener("scroll", handleScroll);
+    window.scrollY > 0 ? navClass.value = "nav-scrolled" : ''
   }
 })
 
