@@ -5,10 +5,12 @@
       <p class="section-header_description">Наша компания специализируется на строительстве домов, бань, беседок и
         хозяйственных строений. Наша команда
         мастеров готова воплотить любой проект в жизнь, независимо от его сложности.</p>
-      <button class="button-primary">
-        Все проекты
-        <img src="@/assets/icons/chevron.svg" alt="chevron">
-      </button>
+      <a href="https://vk.com/albums-14943073">
+        <button class="button-primary">
+          Все проекты
+          <img src="@/assets/icons/chevron.svg" alt="chevron">
+        </button>
+      </a>
     </div>
     <div class="cards-container">
       <div
@@ -39,9 +41,11 @@
             </div>
           </div>
           <div class="card-info_action">
-            <button class="button-primary">
-              Подробнее
-            </button>
+            <a href="https://vk.com/im?media=&sel=-14943073">
+              <button class="button-primary">
+                Подробнее
+              </button>
+            </a>
             <p>от {{ project.price }} </p>
           </div>
         </div>
@@ -122,6 +126,7 @@ const projects = ref([
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
+
   .card {
     flex-grow: 1;
     flex-basis: 0;

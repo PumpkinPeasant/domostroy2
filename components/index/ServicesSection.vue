@@ -4,10 +4,12 @@
       <h2>Виды работ</h2>
       <p class="section-header_description">Мы предоставляем полный спектр услуг по отделочным работам: кровля,
         реставрация и обновление фасадов, установка заборов, а также установка сантехники и монтаж полов и потолков.</p>
-      <button class="button-primary">
-        Все виды работ
-        <img src="@/assets/icons/chevron.svg" alt="chevron">
-      </button>
+      <a href="https://vk.com/im?media=&sel=-14943073">
+        <button class="button-primary">
+          Все виды работ
+          <img src="@/assets/icons/chevron.svg" alt="chevron">
+        </button>
+      </a>
     </div>
     <div class="cards-container">
       <div
@@ -27,9 +29,11 @@
           </div>
         </div>
         <div class="card-info_action">
-          <button class="button-secondary">
-            Подробнее
-          </button>
+          <a href="https://vk.com/im?media=&sel=-14943073">
+            <button class="button-secondary">
+              Подробнее
+            </button>
+          </a>
           <p>{{ service.price }} </p>
         </div>
       </div>

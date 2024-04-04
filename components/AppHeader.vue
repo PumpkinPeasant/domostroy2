@@ -18,7 +18,11 @@
         </NuxtLink>
       </ul>
     </nav>
-    <button class="button-primary">Обратная связь</button>
+
+    <a class="contact_section" href="tel:+7 (911) 563-43-75">
+      <img src="../assets/icons/phone-white.svg" alt="phone">
+      +7 (911) 563-43-75
+    </a>
   </header>
 </template>
 
@@ -119,5 +123,20 @@ header {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: #FEFEFF;
+}
+
+.contact_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+
+  img {
+    margin-right: 10px;
+  }
 }
 </style>

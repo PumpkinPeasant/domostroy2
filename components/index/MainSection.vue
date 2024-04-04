@@ -1,29 +1,32 @@
 <template>
   <main>
-    <h1>Строительство домов <br/>в Северодвинске</h1>
-    <p class="h-capture">Дом вашей мечты - в ваших руках! Закажите звонок нашего специалиста,<br/>
-      и мы поможем воплотить вашу мечту в реальность.</p>
-    <button class="button-primary">
-      Заказать звонок
-    </button>
-    <div class="numbers">
-      <div class="number">
-        <span class="digits h3">100<span class="symbol">+</span></span>
-        <span>Договоров ежегодно</span>
-      </div>
-      <div class="number">
-        <span class="digits h3">700<span class="symbol">+</span></span>
-        <span>Готовых проектов</span>
-      </div>
-      <div class="number">
-        <span class="digits h3">16<span class="symbol">+</span></span>
-        <span>Лет на рынке</span>
+    <div class="main">
+      <h1>Строительство домов <br/>в Северодвинске</h1>
+      <p class="h-capture">Дом вашей мечты - в ваших руках! Закажите звонок нашего специалиста,<br/>
+        и мы поможем воплотить вашу мечту в реальность.</p>
+      <button class="button-primary">
+        <a href="https://vk.com/im?media=&sel=-14943073">Связаться с нами</a>
+      </button>
+      <div class="numbers">
+        <div class="number">
+          <span class="digits h3">100<span class="symbol">+</span></span>
+          <span>Договоров ежегодно</span>
+        </div>
+        <div class="number">
+          <span class="digits h3">700<span class="symbol">+</span></span>
+          <span>Готовых проектов</span>
+        </div>
+        <div class="number">
+          <span class="digits h3">16<span class="symbol">+</span></span>
+          <span>Лет на рынке</span>
+        </div>
       </div>
     </div>
-    <img class="roof-img"
-         alt="Крыша"
-         :src="Roof">
   </main>
+  <img class="roof-img"
+       alt="Крыша"
+       :src="Roof"
+  >
 </template>
 
 <script lang="ts" setup>
@@ -45,13 +48,24 @@ main {
   gap: 3em;
 }
 
+.main {
+  z-index: 10;
+
+  p {
+    margin-bottom: 30px;
+  }
+}
+
 h1 {
   margin-top: $header-width-desktop;
+  margin-bottom: 40px;
 }
 
 .numbers {
   display: flex;
   gap: 3em;
+  margin-top: 15px;
+
   .number {
     display: flex;
     flex-direction: column;

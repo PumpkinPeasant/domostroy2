@@ -6,7 +6,7 @@
       <NuxtLink to="#services" class="text">Виды работ</NuxtLink>
       <NuxtLink to="#contacts" class="text">Контакты</NuxtLink>
       <p class="text">Написать нам: <a href="mailto:domostroi@lenta.ru" class="email">domostroi@lenta.ru</a></p>
-      <NuxtLink class="text">Политика конфиденциальности</NuxtLink>
+      <NuxtLink class="text"></NuxtLink>
       <div>
         <a href="https://t.me/domostroi29">
           <img src="@/assets/icons/telegram.svg" alt="telegram">
@@ -31,7 +31,7 @@
 <style scoped>
 .footer-info {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 0.5fr;
+  grid-template-columns: 1fr 1fr 3fr 1fr;
   grid-template-rows: repeat(2, auto);
   gap: 20px;
   grid-auto-flow: column;
@@ -41,6 +41,7 @@
 .text{
   font-size: 16px;
   color: #77797D;
+  text-align: center;
 }
 .email{
   color: #282A2E;
