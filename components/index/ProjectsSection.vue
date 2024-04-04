@@ -64,27 +64,27 @@ import {ref} from 'vue'
 const projects = ref([
   {
     image: Project1,
-    location: 'СНТ Уйма',
-    rooms: '2 спальни',
-    size: '10x8 м',
-    square: '90 м²',
-    price: '3 400 000 ₽'
+    location: 'СНТ Строитель',
+    rooms: '3 комнаты',
+    size: '8x10 м',
+    square: '80 м²',
+    price: '2 300 000 ₽'
   },
   {
     image: Project2,
-    location: 'СНТ Уйма',
-    rooms: '2 спальни',
-    size: '10x8 м',
-    square: '90 м²',
-    price: '3 400 000 ₽'
+    location: 'СНТ Беломор',
+    rooms: '4 комнаты',
+    size: '6x8 м',
+    square: '96 м²',
+    price: '2 800 000 ₽'
   },
   {
     image: Project3,
-    location: 'СНТ Уйма',
-    rooms: '2 спальни',
-    size: '10x8 м',
-    square: '90 м²',
-    price: '3 400 000 ₽'
+    location: 'СНТ Проморочка',
+    rooms: '6 комнат',
+    size: '8x11 м',
+    square: '88+55 м²',
+    price: '3 300 000 ₽'
   }
 ])
 </script>
@@ -148,7 +148,7 @@ const projects = ref([
         align-items: center;
 
         img {
-          margin-right: 10px;
+          margin-right: 5px;
         }
 
         .card-info_text {

@@ -59,6 +59,7 @@ section {
 }
 
 .card {
+
   width: 450px;
   background-color: white;
   padding: 25px 50px;
