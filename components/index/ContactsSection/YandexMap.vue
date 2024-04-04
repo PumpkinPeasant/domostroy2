@@ -21,6 +21,6 @@ const controls = ["zoomControl", "geolocationControl"];
 
 <style>
 .yandex-container {
-  height: 400px;
+  height: 600px;
 }
 </style>
