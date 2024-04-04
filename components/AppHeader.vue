@@ -118,6 +118,6 @@ header {
 .nav-scrolled {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: #F8FEFE;
+  background-color: #FEFEFF;
 }
 </style>

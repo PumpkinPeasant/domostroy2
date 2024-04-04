@@ -91,11 +91,14 @@ button:active {
 .button-primary {
   background-color: $dark-primary;
   color: $white;
+  cursor: pointer;
 }
 
 .button-secondary {
   background-color: $red-background;
   color: $red-accent;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 
