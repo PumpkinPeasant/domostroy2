@@ -5,7 +5,9 @@
           v-for="(slide, index) in slides"
           v-show="slide.id == active"
           :key="index">
-        <img :src="slide.img" :alt="slide.alt"/>
+        <a :href="slide.href" target="_blank">
+          <img :src="slide.img" :alt="slide.alt"/>
+        </a>
       </div>
     </div>
     <ul class="dots">
@@ -21,10 +23,11 @@
 <script setup lang="ts">
 
 const props = defineProps({
-  slides: { type: Object, required: true },
+  slides: {type: Object, required: true},
 });
 
 let active = defineModel();
+
 function jump(index) {
   active.value = index
 }
