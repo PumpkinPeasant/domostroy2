@@ -44,7 +44,7 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 }
 
 @media (max-width: 900px) {
-  .footer-info{
+  .footer-info {
     grid-template-columns: 1fr 1fr 1.5fr 1fr;
     grid-template-rows: repeat(3, auto);
     grid-auto-flow: row;
