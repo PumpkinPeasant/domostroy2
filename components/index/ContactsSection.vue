@@ -32,12 +32,14 @@
               width="40"
               alt="vk"
               :src="VK"
-              href="https://vk.com/domostroi_29"/>
+              href="https://vk.com/domostroi_29"
+          />
           <media-icon
               width="40"
               alt="telegram"
               :src="Telegram"
-              href="https://t.me/domostroi29"/>
+              href="https://t.me/domostroi29"
+          />
         </div>
       </div>
     </div>

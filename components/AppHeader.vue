@@ -6,31 +6,70 @@
         <span>Домострой</span>
       </NuxtLink>
     </div>
-    <nav class="header__menu">
+    <nav v-if="!mobileSize" class="header__menu">
       <ul class="header__menu-container">
         <NuxtLink
             v-for="link of links"
             :key="link.to"
             :to="link.to"
             class="header__menu-item"
-            :class="{active: router.currentRoute.value.hash === link.to}">
+            :class="{active: router.currentRoute.value.hash === link.to}"
+        >
           {{ link.pageTitle }}
         </NuxtLink>
       </ul>
     </nav>
-
-    <a class="contact_section" href="tel:+7 (911) 563-43-75">
+    <a v-if="!mobileSize" class="contact_section" href="tel:+7 (911) 563-43-75">
       <img src="../assets/icons/phone-white.svg" alt="phone">
       +7 (911) 563-43-75
     </a>
+    <div
+        v-if="mobileSize"
+        @click="toggleMenu"
+        class="menu"
+    >
+      <img src="@/assets/icons/header/menu.svg" alt="menu">
+    </div>
   </header>
+  <Transition :duration="550" name="nested">
+    <div
+        v-if="openMenuFlag"
+        class="sidebar"
+    >
+      <div class="menu_icon">
+        <img
+            @click="toggleMenu"
+            src="@/assets/icons/chevron.svg"
+            alt="chevron"
+        >
+      </div>
+      <NuxtLink
+          v-for="link of links"
+          @click="toggleMenu"
+          :key="link.to"
+          :to="link.to"
+          class="sidebar_menu"
+          :class="{active: router.currentRoute.value.hash === link.to}"
+      >
+        {{ link.pageTitle }}
+      </NuxtLink>
+    </div>
+  </Transition>
+
 </template>
 
 <script setup lang="ts">
-import {ref} from 'vue'
+import {ref, watch} from 'vue'
 import Logo from '~/assets/images/logo.svg'
+import VK from "assets/icons/vk.svg";
+import Telegram from "assets/icons/telegram.svg";
+import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 
 const router = useRouter();
+const mobileSize = ref(true)
+const openMenuFlag = ref(false)
+const navClass = ref('')
+
 const links = ref([
   {
     pageTitle: "Проекты",
@@ -50,19 +89,15 @@ const links = ref([
   }
 ]);
 
-const navClass = ref('')
 
 onMounted(() => {
-  {
-    window.addEventListener("scroll", handleScroll);
-    window.scrollY > 0 ? navClass.value = "nav-scrolled" : ''
-  }
+  window.addEventListener("scroll", handleScroll);
+  window.scrollY > 0 ? navClass.value = "nav-scrolled" : ''
+  window.addEventListener("resize", handleWidth);
 })
 
 onBeforeUnmount(() => {
-  {
-    window.removeEventListener("scroll", handleScroll);
-  }
+  window.removeEventListener("scroll", handleScroll);
 })
 
 function handleScroll(event) {
@@ -71,6 +106,15 @@ function handleScroll(event) {
   } else {
     navClass.value = "";
   }
+}
+
+function toggleMenu() {
+  openMenuFlag.value = !openMenuFlag.value
+}
+
+function handleWidth() {
+  let width = window.innerWidth
+  mobileSize.value = width < 1000;
 }
 </script>
 
@@ -140,5 +184,68 @@ header {
   img {
     margin-right: 10px;
   }
+}
+
+.menu {
+  transition: transform 0.2s ease;
+}
+
+.menu:active {
+  transform: translateY(2px);
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 100000;
+  padding: 30px 25px;
+  display: flex;
+  height: 100vh;
+  width: 50vw;
+  flex-direction: column;
+  right: 0;
+  top: 0;
+  background: $grey-secondary;
+}
+
+.menu_icon {
+  margin-bottom: 70px;
+}
+
+.sidebar_menu {
+  color: white;
+  font-size: 19px;
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.nested-enter-active, .nested-leave-active {
+  transition: all 0.3s ease-in-out;
+}
+
+.nested-leave-active {
+  transition-delay: 0.25s;
+}
+
+.nested-enter-from,
+.nested-leave-to {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.nested-enter-active .inner,
+.nested-leave-active .inner {
+  transition: all 0.3s ease-in-out;
+}
+
+.nested-enter-active .inner {
+  transition-delay: 0.25s;
+}
+
+.nested-enter-from .inner,
+.nested-leave-to .inner {
+  transform: translateX(30px);
+  opacity: 0.001;
 }
 </style>

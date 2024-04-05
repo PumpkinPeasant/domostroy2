@@ -30,8 +30,6 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_colors";
-
 .footer-info {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 1fr;
@@ -44,23 +42,23 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 
 .text {
   font-size: 16px;
-  color: $grey-secondary;
+  color: #77797DFF;
 }
 
 .link {
   &:hover, &:active {
-    color: $dark-primary;
+    color: #282A2EFF;
     font-weight: 600;
   }
 }
 
 .email {
-  color: $dark-primary;
+  color: #282A2EFF;
 }
 
 .footer-logo {
   height: 40px;
-  background-color: $dark-primary;
+  background-color: #282A2EFF;
   display: flex;
   flex-direction: row;
   justify-content: center;
