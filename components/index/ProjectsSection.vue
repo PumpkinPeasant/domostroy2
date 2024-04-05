@@ -63,7 +63,7 @@ import {ref} from 'vue'
 
 const projects = ref([
   {
-    image: Project1,
+    image: Project3,
     location: 'СНТ Строитель',
     rooms: '3 комнаты',
     size: '8x10 м',
@@ -79,13 +79,13 @@ const projects = ref([
     price: '2 800 000 ₽'
   },
   {
-    image: Project3,
-    location: 'СНТ Проморочка',
+    image: Project1,
+    location: 'СНТ Поморочка',
     rooms: '6 комнат',
     size: '8x11 м',
     square: '88+55 м²',
     price: '3 300 000 ₽'
-  }
+  },
 ])
 </script>
 
