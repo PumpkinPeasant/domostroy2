@@ -26,18 +26,18 @@
             <p><a class="contact_section" href="tel:+7 (953) 262 75 84">+7 (953) 262 75 84</a></p>
           </div>
         </div>
-        <p class="title">Или напишите в социальные сети</p>
+        <p class="title">Cоциальные сети</p>
         <div class="icons">
-          <div class="icon">
-            <a href="https://t.me/domostroi29" class="icon-link">
-              <img src="@/assets/icons/telegram.svg" alt="telegram">
-            </a>
-          </div>
-          <div class="icon">
-            <a href="https://vk.com/domostroi_29" class="icon-link">
-              <img src="@/assets/icons/vk.svg" alt="vk">
-            </a>
-          </div>
+          <media-icon
+              width="40"
+              alt="vk"
+              :src="VK"
+              href="https://vk.com/domostroi_29"/>
+          <media-icon
+              width="40"
+              alt="telegram"
+              :src="Telegram"
+              href="https://t.me/domostroi29"/>
         </div>
       </div>
     </div>
@@ -45,13 +45,12 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import YandexMap from "~/components/index/ContactsSection/YandexMap.vue";
+import MediaIcon from "~/components/index/UI/MediaIcon.vue";
+import Telegram from "~/assets/icons/telegram.svg";
+import VK from "~/assets/icons/vk.svg";
 
-export default {
-  name: "ContactsSection",
-  components: {YandexMap}
-}
 </script>
 
 <style scoped lang="scss">
@@ -81,7 +80,7 @@ section {
   margin: 0 50px 30px 0;
 
   .card-contact {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
 }
 

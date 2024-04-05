@@ -7,16 +7,14 @@
       <NuxtLink to="#contacts" class="text link">Контакты</NuxtLink>
       <p class="text">Написать нам: <a href="mailto:domostroi@lenta.ru" class="email link">domostroi@lenta.ru</a></p>
       <NuxtLink class="text"></NuxtLink>
-      <div class="icon">
-        <a href="https://t.me/domostroi29" class="icon-link">
-          <img src="@/assets/icons/telegram.svg" alt="telegram">
-        </a>
-      </div>
-      <div class="icon">
-        <a href="https://vk.com/domostroi_29" class="icon-link">
-          <img src="@/assets/icons/vk.svg" alt="vk">
-        </a>
-      </div>
+      <media-icon
+          alt="vk"
+          :src="VK"
+          href="https://vk.com/domostroi_29"/>
+      <media-icon
+          alt="telegram"
+          :src="Telegram"
+          href="https://t.me/domostroi29"/>
     </section>
     <section class="footer-logo">
       <img src="@/assets/icons/footer-logo.svg" alt="">
@@ -26,6 +24,9 @@
 
 <script setup>
 
+import Telegram from "~/assets/icons/telegram.svg";
+import VK from "~/assets/icons/vk.svg";
+import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 </script>
 
 <style scoped lang="scss">
@@ -64,21 +65,5 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.icon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: end;
-
-  .icon-link {
-    transform-origin: center center;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    &:hover, &:active {
-      transform: scale(1.2);
-    }
-  }
 }
 </style>
