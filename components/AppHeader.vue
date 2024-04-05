@@ -94,6 +94,7 @@ onMounted(() => {
   window.addEventListener("scroll", handleScroll);
   window.scrollY > 0 ? navClass.value = "nav-scrolled" : ''
   window.addEventListener("resize", handleWidth);
+  handleWidth()
 })
 
 onBeforeUnmount(() => {
