@@ -90,6 +90,22 @@ const projects = ref([
 </script>
 
 <style scoped lang="scss">
+@import "assets/scss/_colors";
+
+section{
+  position: relative;
+}
+
+section::after{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $dark-primary;
+}
 
 .section-header {
   display: flex;
@@ -136,12 +152,14 @@ const projects = ref([
   .card {
     flex-grow: 1;
     flex-basis: 0;
+    box-shadow: 0 11px 44px 16px rgba(14, 48, 114, .05);
 
     img {
       object-fit: cover;
     }
 
     .card-info {
+      background: $surface;
       padding: 15px 20px;
 
       .card-info_title {

@@ -19,6 +19,6 @@ import ContactsSection from "~/components/index/ContactsSection.vue";
 
 <style scoped>
 .section{
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 </style>
