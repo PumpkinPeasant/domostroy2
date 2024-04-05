@@ -3,7 +3,7 @@
     <h2>Контакты</h2>
     <div class="map_wrapper">
       <yandex-map/>
-      <div class="card">
+      <div class="card card-shadow">
         <div class="card-contact">
           <p class="main-title">Наш офис</p>
           <div class="card_element">
@@ -60,6 +60,15 @@ import VK from "~/assets/icons/vk.svg";
 
 section {
   padding: 0;
+  //@media (max-width: 900px) {
+  //  &::after{
+  //    content: '';
+  //    position: relative;
+  //    border: 2px solid;
+  //    width: 300px;
+  //    height:300px;
+  //  }
+  //}
 
   h2 {
     padding: 0 2.8em;
@@ -68,6 +77,9 @@ section {
 
 .map_wrapper {
   position: relative;
+  @media (max-width: 900px) {
+    margin-bottom: 250px;
+  }
 }
 
 .card {
@@ -80,6 +92,14 @@ section {
   display: flex;
   flex-direction: column;
   margin: 0 50px 30px 0;
+  @media (max-width: 900px) {
+    width: unset;
+    margin: 0;
+    bottom: -40%;
+    top: unset;
+    left: 20px;
+    right: 20px;
+  }
 
   .card-contact {
     margin-bottom: 15px;
@@ -119,5 +139,9 @@ section {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  @media (max-width: 900px) {
+    justify-content: flex-start;
+    gap: 30px;
+  }
 }
 </style>

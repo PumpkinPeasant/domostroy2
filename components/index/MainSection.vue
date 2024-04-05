@@ -22,11 +22,11 @@
         </div>
       </div>
     </div>
+    <img class="roof-img"
+         alt="Крыша"
+         :src="Roof"
+    />
   </main>
-  <img class="roof-img"
-       alt="Крыша"
-       :src="Roof"
-  >
 </template>
 
 <script lang="ts" setup>
@@ -46,6 +46,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 3em;
+
+  @media (max-width: 900px) {
+    height: unset;
+    padding-right: 0;
+  }
 }
 
 .main {
@@ -93,5 +98,8 @@ h1 {
   right: 0;
   width: auto;
   height: 80%;
+  @media (max-width: 900px) {
+    position: unset;
+  }
 }
 </style>

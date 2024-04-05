@@ -4,7 +4,8 @@
         style="padding: 0 !important"
         :controls="controls"
         zoom="16"
-        :coordinates="coordinates">
+        :coordinates="coordinates"
+    >
       <yandex-marker marker-id="1" :coordinates="coordinates">
         <div class="marker"/>
       </yandex-marker>

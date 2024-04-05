@@ -63,8 +63,8 @@ const benefits = ref([
     flex-direction: column;
     align-items: center;
     top: -25%;
-    left: 11.5em;
-    right: 11.5em;
+    //left: 11.5em;
+    //right: 11.5em;
     padding: 25px 50px;
     border-radius: 5px;
 

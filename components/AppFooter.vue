@@ -1,17 +1,20 @@
 <template>
   <footer>
     <section class="footer-info">
-      <NuxtLink to="#projects" class="text link">Проекты</NuxtLink>
-      <NuxtLink to="#mortgage" class="text link">Ипотека</NuxtLink>
-      <NuxtLink to="#services" class="text link">Виды работ</NuxtLink>
-      <NuxtLink to="#contacts" class="text link">Контакты</NuxtLink>
-      <p class="text">Написать нам: <a href="mailto:domostroi@lenta.ru" class="email link">domostroi@lenta.ru</a></p>
-      <NuxtLink class="text"></NuxtLink>
+      <NuxtLink to="#projects" class="text link footer-info_element">Проекты</NuxtLink>
+      <NuxtLink to="#mortgage" class="text link footer-info_element">Ипотека</NuxtLink>
+      <NuxtLink to="#services" class="text link footer-info_element">Виды работы</NuxtLink>
+      <NuxtLink to="#contacts" class="text link footer-info_element">Контакты</NuxtLink>
+      <p class="text footer-info_element">Написать нам: <a href="mailto:domostroi@lenta.ru" class="email link">domostroi@lenta.ru</a>
+      </p>
+      <div></div>
       <media-icon
+          class="footer-info_element"
           alt="vk"
           :src="VK"
           href="https://vk.com/domostroi_29"/>
       <media-icon
+          class="footer-info_element"
           alt="telegram"
           :src="Telegram"
           href="https://t.me/domostroi29"/>
@@ -38,6 +41,29 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
   grid-auto-flow: column;
   margin-bottom: 40px;
   align-items: center;
+}
+
+@media (max-width: 900px) {
+  .footer-info{
+    grid-template-columns: 1fr 1fr 1.5fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: row;
+    gap: 5px;
+    grid-row-gap: 20px;
+    text-align: center;
+  }
+  .footer-info_element:nth-child(5) {
+    text-align: center;
+    grid-column: span 4;
+  }
+  .footer-info_element:nth-child(6) {
+    justify-content: center;
+    grid-column: 2;
+  }
+  .footer-info_element:nth-child(7) {
+    grid-column: 2;
+    justify-content: center;
+  }
 }
 
 .text {
