@@ -77,6 +77,9 @@ const services = ref([
   gap: 50px;
   align-items: center;
   margin-bottom: 25px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 
   h2 {
     white-space: nowrap;
@@ -105,6 +108,9 @@ const services = ref([
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 
   .card {
     display: flex;
