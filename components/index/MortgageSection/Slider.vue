@@ -1,6 +1,6 @@
 <template>
   <div class="slider">
-    <div class="slides">
+    <div class="slides block">
       <div
           v-for="(slide, index) in slides"
           v-show="slide.id == active"
@@ -10,6 +10,16 @@
         </a>
       </div>
     </div>
+    <span
+        @click="move(-1)"
+        class="prev">
+      <arrow/>
+    </span>
+    <span
+        @click="move(1)"
+        class="next">
+       <arrow/>
+    </span>
     <ul class="dots">
       <li
           v-for="(dot, index) in slides"
@@ -21,15 +31,24 @@
 </template>
 
 <script setup lang="ts">
+import Arrow from "~/components/index/UI/Arrow.vue";
 
 const props = defineProps({
   slides: {type: Object, required: true},
 });
 
-let active = defineModel();
 
+const active = ref(1)
 function jump(index) {
   active.value = index
+}
+
+function move(amount) {
+  let newActive
+  const newIndex = active.value + amount
+  if (newIndex > props.slides.length) newActive = 1
+  if (newIndex === 0) newActive = props.slides.length
+  active.value = newActive || newIndex
 }
 </script>
 
@@ -82,9 +101,67 @@ $primary: #221e21;
   }
 }
 
+
+.prev,
+.next {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 48px;
+  text-align: center;
+  text-indent: -2px;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    height: 20px;
+    color: #fff;
+  }
+
+  &:hover {
+    background: white;
+    color: #fff;
+    transform: scale(1.2);
+
+    svg{
+      color: black;
+    }
+  }
+
+  &:active {
+    transform: translate(0, 3px) scale(1.2);
+  }
+}
+
+.next {
+  right: 0;
+  top: 50%;
+  margin-left: auto;
+  margin-right: 25px;
+  text-indent: 2px;
+  padding-left: 2px;
+  svg{
+    transform: rotate(180deg);
+  }
+}
+
+.prev {
+  left: 0;
+  top: 50%;
+  margin-right: auto;
+  margin-left: 25px;
+  text-indent: 2px;
+  padding-right: 3px;
+}
+
 .dots {
   text-align: center;
-  padding: 16px;
+  padding-top: 20px;
 
   li {
     width: 6px;
