@@ -58,7 +58,7 @@ h1 {
   font-weight: 600;
   letter-spacing: -1.7px;
 
-  @media (max-width:  map-get($grid-breakpoints, md)) {
+  @media (max-width: map-get($grid-breakpoints, md)) {
     font-weight: 700;
   }
 }
@@ -73,7 +73,7 @@ h3 {
   font-weight: 700;
 }
 
-.h3{
+.h3 {
   font-size: var(--fs-h3);
   letter-spacing: -2.5px;
   font-weight: 700;
@@ -83,7 +83,7 @@ h3 {
   font-size: var(--fs-h-capture);
   font-weight: 700;
   color: $dark-primary;
-  margin-bottom: 8px ;
+  margin-bottom: 8px;
 }
 
 button {
@@ -102,6 +102,11 @@ button:active {
   background-color: $dark-primary;
   color: $white;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:hover, &:active{
+    outline: 2px solid $dark-primary;
+  }
 }
 
 .button-secondary {
@@ -109,6 +114,12 @@ button:active {
   color: $red-accent;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &:hover, &:active{
+    outline: 2px solid $red-accent;
+    background: none;
+  }
 }
 
 .p-body {

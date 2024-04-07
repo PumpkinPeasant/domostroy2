@@ -19,7 +19,7 @@
         </NuxtLink>
       </ul>
     </nav>
-    <a v-if="!mobileSize" class="contact_section" href="tel:+7 (911) 563-43-75">
+    <a v-if="!mobileSize" class="contact_section button-primary" href="tel:+7 (911) 563-43-75">
       <img src="../assets/icons/phone-white.svg" alt="phone">
       +7 (911) 563-43-75
     </a>
@@ -183,8 +183,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 12px 30px;
-  background-color: $dark-primary;
-  color: $white;
   font-size: 16px;
 
   img {
