@@ -26,5 +26,9 @@ const controls = ["zoomControl", "geolocationControl"];
 
 .yandex-container {
   height: 75vh;
+
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    height: 50vh;
+  }
 }
 </style>

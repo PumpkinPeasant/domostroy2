@@ -154,11 +154,16 @@ header {
       cursor: pointer;
       font-size: 16px;
       color: $grey-secondary;
+      transition: font-weight 0.2s ease;
+      &:hover, &:active {
+        color:  $dark-primary;
+      }
     }
   }
 
   .active {
     color: $dark-primary;
+    font-weight: 600;
   }
 
   @media (max-width: map-get($grid-breakpoints, md)) {

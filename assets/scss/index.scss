@@ -150,3 +150,11 @@ button:active {
   border: 1px solid #F5F5F6;
   box-shadow: 0 11px 44px 16px rgba(14, 48, 114, .05);
 }
+
+.link {
+  transition: font-weight 0.2s ease;
+  &:hover, &:active {
+    color: #282A2EFF !important;
+    font-weight: 600;
+  }
+}

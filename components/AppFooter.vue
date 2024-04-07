@@ -51,31 +51,23 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
     gap: 5px;
     grid-row-gap: 20px;
     text-align: center;
+    margin: 10px 0;
   }
   .footer-info_element:nth-child(5) {
     text-align: center;
     grid-column: span 4;
   }
-  .footer-info_element:nth-child(6) {
-    justify-content: center;
-    grid-column: 2;
+  .footer-info_element:nth-child(8) {
+    display: none;
   }
   .footer-info_element:nth-child(7) {
-    grid-column: 2;
-    justify-content: center;
+    display: none;
   }
 }
 
 .text {
   font-size: 16px;
   color: #77797DFF;
-}
-
-.link {
-  &:hover, &:active {
-    color: #282A2EFF;
-    font-weight: 600;
-  }
 }
 
 .email {

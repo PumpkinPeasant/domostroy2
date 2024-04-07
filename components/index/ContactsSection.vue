@@ -5,10 +5,10 @@
       <yandex-map/>
       <div class="card card-shadow">
         <div class="card-contact">
-          <p class="main-title">Наш офис</p>
+          <h2 class="main-title">Наш офис</h2>
           <div class="card_element">
             <img src="@/assets/icons/contact/map.svg" alt="map">
-            <div>
+            <div class="link">
               <p>г. Северодвинск,</p>
               <p>ул. Железнодоражная 54а, офис 5</p>
             </div>
@@ -19,14 +19,14 @@
           </div>
           <div class="card_element">
             <img src="@/assets/icons/contact/phone.svg" alt="map">
-            <p><a class="contact_section" href="tel:+7 (911) 563-43-75">+7 (911) 563-43-75</a></p>
+            <p><a class="contact_section link" href="tel:+7 (911) 563-43-75">+7 (911) 563-43-75</a></p>
           </div>
           <div class="card_element">
             <img src="@/assets/icons/contact/phone.svg" alt="map">
-            <p><a class="contact_section" href="tel:+7 (953) 262 75 84">+7 (953) 262 75 84</a></p>
+            <p><a class="contact_section link" href="tel:+7 (953) 262 75 84">+7 (953) 262 75 84</a></p>
           </div>
         </div>
-        <p class="title">Cоциальные сети</p>
+        <p class="h-capture">Cоциальные сети</p>
         <div class="icons">
           <media-icon
               width="40"
@@ -74,6 +74,8 @@ section {
 
 .card {
   position: absolute;
+  max-width: 390px;
+  width: 100%;
   background-color: white;
   padding: 30px 35px;
   display: flex;
@@ -89,16 +91,17 @@ section {
     top: -3em;
     right: unset;
     margin: 0 var(--section-y-padding);
+    padding: 16px 20px;
   }
 
   .card-contact {
-    margin-bottom: 15px;
+    margin-bottom: 1em;
   }
 }
 
 .main-title {
-  font-size: 35px;
   margin-bottom: 15px;
+  padding: 0;
 }
 
 .title {
@@ -115,10 +118,15 @@ section {
   img {
     margin-right: 15px;
     width: 25px;
+
+    @media (max-width: 900px) {
+      width: 18px;
+      margin-right: 8px;
+    }
   }
 
   p {
-    font-size: 16px;
+    font-size: var(--fs-body);
     color: $dark-primary;
   }
 }
@@ -131,7 +139,11 @@ section {
   gap: 20px;
   @media (max-width: 900px) {
     justify-content: flex-start;
-    gap: 30px;
+    gap: 10px;
+
+    .icon{
+      width: 35px;
+    }
   }
 }
 </style>
