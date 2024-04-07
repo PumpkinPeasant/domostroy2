@@ -79,7 +79,7 @@ const benefits = ref([
     .items {
       display: flex;
       gap: 3em;
-      @media (max-width: 900px) {
+      @media (max-width: map-get($grid-breakpoints, md)) {
         flex-direction: column;
         gap: 1.5em;
       }
@@ -87,7 +87,7 @@ const benefits = ref([
       .item {
         flex-grow: 1;
         flex-basis: 0;
-        @media (max-width: 900px) {
+        @media (max-width: map-get($grid-breakpoints, md)) {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -98,7 +98,7 @@ const benefits = ref([
           height: 80px;
           width: 80px;
           margin-bottom: 15px;
-          @media (max-width: 900px) {
+          @media (max-width: map-get($grid-breakpoints, md)) {
             margin: 0 15px 0 0;
             height: 50px;
             width: 50px;
