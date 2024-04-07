@@ -53,6 +53,8 @@ function move(amount) {
 </script>
 
 <style scoped lang="scss">
+@import "assets/scss/_colors";
+@import "assets/scss/_variables";
 $primary: #221e21;
 
 .slider {
@@ -109,42 +111,73 @@ $primary: #221e21;
   height: 45px;
   border: 2px solid white;
   border-radius: 50%;
+  top: 50%;
   cursor: pointer;
   line-height: 48px;
   text-align: center;
   text-indent: -2px;
   transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center center;
   display: flex;
   align-items: center;
   justify-content: center;
 
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    background: white;
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    width: 25px;
+    height: 25px;
+    top: 45%;
+  }
+
   svg {
     height: 20px;
     color: #fff;
+
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+      color: black;
+    }
+
+    @media (max-width: map-get($grid-breakpoints, sm)) {
+      height: 15px;
+    }
   }
 
-  &:hover {
+  &:hover, &:active {
     background: white;
     color: #fff;
-    transform: scale(1.2);
 
     svg{
       color: black;
     }
   }
-
-  &:active {
-    transform: translate(0, 3px) scale(1.2);
-  }
 }
 
 .next {
   right: 0;
-  top: 50%;
+  transform: translateY(-50%) translateX(50%);
   margin-left: auto;
-  margin-right: 25px;
+  margin-right: calc(var(--section-y-padding) / 2);
   text-indent: 2px;
   padding-left: 2px;
+
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    transform: translateY(-50%);
+    margin-right: 10px;
+  }
+
+  &:hover, &:active {
+    transform: translateY(-50%) scale(1.2) translateX(50%);
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      transform: translateY(-50%) scale(1.2);
+    }
+  }
+
   svg{
     transform: rotate(180deg);
   }
@@ -152,11 +185,24 @@ $primary: #221e21;
 
 .prev {
   left: 0;
-  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
   margin-right: auto;
-  margin-left: 25px;
+  margin-left: calc(var(--section-y-padding) / 2);;
   text-indent: 2px;
   padding-right: 3px;
+
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    transform: translateY(-50%);
+    margin-left: 10px;
+  }
+
+  &:hover, &:active {
+    transform: translateY(-50%) scale(1.2) translateX(-50%);
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      transform: translateY(-50%) scale(1.2);
+    }
+  }
 }
 
 .dots {
