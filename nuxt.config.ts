@@ -1,15 +1,12 @@
-// import vuetifyConfig from './vuetify.config';
-// import viteConfig from './vite.config';
-
 export default defineNuxtConfig({
-    // modules: ['@invictus.codes/nuxt-vuetify'],
     // @ts-ignore
     plugins: [],
     css: ['~/assets/scss/index.scss', '~/assets/scss/_colors.scss', '~/assets/scss/_variables.scss'],
-    // watch: ['~/vuetify.config.ts'],
     dev: true,
-    // vuetify: vuetifyConfig,
-    // vite: viteConfig,
+    target: 'static',
+    router: {
+        base: '/domostroy2/'
+    },
     app: {
         head: {
             title: 'Домострой | Каркасное строительство',
