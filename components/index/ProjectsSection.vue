@@ -101,7 +101,7 @@ section::after{
   content: "";
   z-index: -1;
   position: absolute;
-  top: 50%;
+  top: 65%;
   bottom: 0;
   left: 0;
   right: 0;

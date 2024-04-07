@@ -1,7 +1,7 @@
 <template>
   <MainSection id="top"/>
   <BenefitsSection />
-  <ProjectsSection id="projects" class="section-padding"/>
+  <ProjectsSection id="projects"/>
   <MortgageSection id="mortgage" class="section"/>
   <ServicesSection id="services" class="section"/>
   <ContactsSection id="contacts" class="section"/>
@@ -19,9 +19,6 @@ import ContactsSection from "~/components/index/ContactsSection.vue";
 
 <style scoped>
 .section{
-  margin-bottom: 100px;
-}
-.section-padding{
-  padding-bottom: 100px;
+  padding-top: 95px;
 }
 </style>

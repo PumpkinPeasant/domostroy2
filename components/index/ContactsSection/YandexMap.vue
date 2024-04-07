@@ -20,8 +20,11 @@ const controls = ["zoomControl", "geolocationControl"];
 
 </script>
 
-<style>
+<style lang="scss">
+@import "assets/scss/_colors";
+@import "assets/scss/_variables";
+
 .yandex-container {
-  height: 600px;
+  height: 75vh;
 }
 </style>

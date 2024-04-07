@@ -57,48 +57,38 @@ import VK from "~/assets/icons/vk.svg";
 
 <style scoped lang="scss">
 @import "assets/scss/_colors";
+@import "assets/scss/_variables";
 
 section {
   padding: 0;
-  //@media (max-width: 900px) {
-  //  &::after{
-  //    content: '';
-  //    position: relative;
-  //    border: 2px solid;
-  //    width: 300px;
-  //    height:300px;
-  //  }
-  //}
 
   h2 {
-    padding: 0 2.8em;
+    padding: 0 var(--section-y-padding);
+    margin-bottom: 16px;
   }
 }
 
 .map_wrapper {
   position: relative;
-  @media (max-width: 900px) {
-    margin-bottom: 250px;
-  }
 }
 
 .card {
   position: absolute;
-  right: 0;
-  top: 18%;
-  width: 420px;
   background-color: white;
   padding: 30px 35px;
   display: flex;
   flex-direction: column;
-  margin: 0 50px 30px 0;
+  right: var(--section-y-padding);
+  top: 50%;
+  transform: translateY(-50%);
+
   @media (max-width: 900px) {
+    position: relative;
     width: unset;
-    margin: 0;
-    bottom: -40%;
-    top: unset;
-    left: 20px;
-    right: 20px;
+    transform: unset;
+    top: -3em;
+    right: unset;
+    margin: 0 var(--section-y-padding);
   }
 
   .card-contact {

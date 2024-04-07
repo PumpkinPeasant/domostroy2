@@ -39,7 +39,7 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
   grid-template-rows: repeat(2, auto);
   gap: 20px;
   grid-auto-flow: column;
-  margin-bottom: 40px;
+  margin: 20px 0;
   align-items: center;
 }
 
