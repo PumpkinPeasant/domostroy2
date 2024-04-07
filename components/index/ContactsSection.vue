@@ -87,6 +87,7 @@ section {
   @media (max-width: 900px) {
     position: relative;
     width: unset;
+    max-width: unset;
     transform: unset;
     top: -3em;
     right: unset;
