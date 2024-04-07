@@ -2,7 +2,7 @@
   <section>
     <div class="section-header">
       <h2>Наши проекты</h2>
-      <p class="section-header_description">Наша компания специализируется на строительстве домов, бань, беседок и
+      <p class="section-header_description heading-description">Наша компания специализируется на строительстве домов, бань, беседок и
         хозяйственных строений. Наша команда
         мастеров готова воплотить любой проект в жизнь, независимо от его сложности.</p>
       <a href="https://vk.com/albums-14943073" target="_blank">
@@ -91,6 +91,7 @@ const projects = ref([
 
 <style scoped lang="scss">
 @import "assets/scss/_colors";
+@import "assets/scss/_variables";
 
 section{
   position: relative;
@@ -114,8 +115,11 @@ section::after{
   gap: 50px;
   align-items: center;
   margin-bottom: 25px;
-  @media (max-width: 900px) {
-    flex-direction: column;
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: auto auto;
+    gap: 1em;
   }
 
   h2 {
@@ -123,8 +127,10 @@ section::after{
   }
 
   p {
-    color: #77797DFF;
-    font-size: 17px;
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+      grid-row: 2/3;
+      grid-column: 1/3;
+    }
   }
 
   button {
