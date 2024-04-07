@@ -27,21 +27,24 @@
         v-if="mobileSize"
         @click="toggleMenu"
         class="menu"
-    >
+        style="cursor: pointer">
       <img src="@/assets/icons/header/menu.svg" alt="menu">
     </div>
   </header>
   <Transition :duration="550" name="nested">
     <div
         v-if="openMenuFlag"
-        class="sidebar"
-    >
-      <div class="menu_icon">
-        <img
-            @click="toggleMenu"
-            src="@/assets/icons/chevron.svg"
-            alt="chevron"
-        >
+        class="sidebar">
+      <div class="sidebar-header">
+        <div class="header__logo">
+          <NuxtLink to="/">
+            <img :src="Logo" alt="Домострой лого"/>
+            <span>Домострой</span>
+          </NuxtLink>
+        </div>
+        <div class="menu_icon" @click="toggleMenu">
+          <arrow/>
+        </div>
       </div>
       <NuxtLink
           v-for="link of links"
@@ -61,9 +64,7 @@
 <script setup lang="ts">
 import {ref, watch} from 'vue'
 import Logo from '~/assets/images/logo.svg'
-import VK from "assets/icons/vk.svg";
-import Telegram from "assets/icons/telegram.svg";
-import MediaIcon from "~/components/index/UI/MediaIcon.vue";
+import Arrow from "~/components/index/UI/Arrow.vue";
 
 const router = useRouter();
 const mobileSize = ref(true)
@@ -111,6 +112,12 @@ function handleScroll(event) {
 
 function toggleMenu() {
   openMenuFlag.value = !openMenuFlag.value
+  const body = document.querySelector('body')
+  if (openMenuFlag.value) {
+    body.style.overflow = "hidden"
+  } else {
+    body.style.overflow = "auto"
+  }
 }
 
 function handleWidth() {
@@ -136,14 +143,6 @@ header {
   padding-top: 4rem;
   padding-bottom: 4rem;
 
-  .header__logo a {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 700;
-  }
-
   .header__menu {
     &-container {
       display: flex;
@@ -155,8 +154,9 @@ header {
       font-size: 16px;
       color: $grey-secondary;
       transition: font-weight 0.2s ease;
+
       &:hover, &:active {
-        color:  $dark-primary;
+        color: $dark-primary;
       }
     }
   }
@@ -170,6 +170,14 @@ header {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+}
+
+.header__logo a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .toggleButton {
@@ -214,21 +222,32 @@ header {
   padding: 30px 25px;
   display: flex;
   height: 100vh;
-  width: 50vw;
   flex-direction: column;
   right: 0;
   top: 0;
-  background: $grey-secondary;
+  left: 0;
+  background: $white;
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .menu_icon {
-  margin-bottom: 70px;
+  cursor: pointer;
+
+  svg {
+    color: #282A2E;
+    height: 20px;
+  }
 }
 
 .sidebar_menu {
-  color: white;
+  color: $dark-primary;
   font-size: 19px;
-  margin-bottom: 30px;
+  margin: 15px 0;
   text-align: center;
   display: flex;
   flex-direction: column;
