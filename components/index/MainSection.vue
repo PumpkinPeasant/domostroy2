@@ -5,7 +5,10 @@
       <p class="h-capture">Дом вашей мечты - в ваших руках! Закажите звонок нашего специалиста,<br/>
         и мы поможем воплотить вашу мечту в реальность.</p>
       <button class="button-primary">
-        <a href="https://vk.com/im?media=&sel=-14943073">Связаться с нами</a>
+        <a href="https://vk.com/im?media=&sel=-14943073"
+           target="_blank">
+          Связаться с нами
+        </a>
       </button>
       <div class="numbers">
         <div class="number">
