@@ -61,6 +61,11 @@ h1 {
   @media (max-width: map-get($grid-breakpoints, md)) {
     font-weight: 700;
   }
+
+  //Небольшой костыль для горизонтального расположения экрана на мобилке
+  @media (max-height: 685px) AND (orientation: landscape) {
+    font-size: 30px;
+  }
 }
 
 h2 {
