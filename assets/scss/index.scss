@@ -63,7 +63,7 @@ h1 {
   }
 
   //Небольшой костыль для горизонтального расположения экрана на мобилке
-  @media (max-height: 685px) AND (orientation: landscape) {
+  @media (max-height: 685px) AND (orientation: landscape) AND (max-width: 900px) {
     font-size: 30px;
   }
 }

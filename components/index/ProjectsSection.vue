@@ -5,7 +5,7 @@
       <p class="section-header_description heading-description">Наша компания специализируется на строительстве домов, бань, беседок и
         хозяйственных строений. Наша команда
         мастеров готова воплотить любой проект в жизнь, независимо от его сложности.</p>
-      <a href="https://vk.com/albums-14943073" target="_blank">
+      <a href="https://vk.com/domctroy" target="_blank">
         <button class="button-primary">
           Все проекты
           <img src="@/assets/icons/chevron.svg" alt="chevron">
