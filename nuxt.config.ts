@@ -4,9 +4,6 @@ export default defineNuxtConfig({
     css: ['~/assets/scss/index.scss', '~/assets/scss/_colors.scss', '~/assets/scss/_variables.scss'],
     dev: true,
     target: 'static',
-    router: {
-        base: '/domostroy2/'
-    },
     app: {
         head: {
             title: 'Домострой | Каркасное строительство',
