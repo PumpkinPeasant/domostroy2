@@ -175,6 +175,11 @@ header {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: $background;
+
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
 }
 
 .contact_section {
