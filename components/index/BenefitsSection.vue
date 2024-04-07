@@ -53,30 +53,27 @@ const benefits = ref([
 @import "assets/scss/_colors";
 
 .benefits-section {
-  height: 300px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 100%;
 
   .benefits-card {
-    position: absolute;
+    position: relative;
     background: $surface;
+    top: -6em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: -20%;
-    left: 11.5em;
-    right: 11.5em;
     padding: 25px 50px;
-    border-radius: 5px;
 
-    @media (max-width: 1300px) {
-      left: 5em;
-      right: 5em;
+    @media (max-width: map-get($grid-breakpoints, xl)) {
       padding: 25px 15px;
     }
 
-    @media (max-width: 900px) {
-      left: 2em;
-      right: 2em;
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      top: -3em;
     }
 
     .items {
@@ -84,6 +81,7 @@ const benefits = ref([
       gap: 3em;
       @media (max-width: 900px) {
         flex-direction: column;
+        gap: 1.5em;
       }
 
       .item {
