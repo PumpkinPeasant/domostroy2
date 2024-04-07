@@ -2,7 +2,7 @@
   <section>
     <div class="section-header">
       <h2>Виды работ</h2>
-      <p class="section-header_description">Мы предоставляем полный спектр услуг по отделочным работам: кровля,
+      <p class="section-header_description heading-description">Мы предоставляем полный спектр услуг по отделочным работам: кровля,
         реставрация и обновление фасадов, установка заборов, а также установка сантехники и монтаж полов и потолков.</p>
       <a href="https://vk.com/im?media=&sel=-14943073" target="_blank">
         <button class="button-primary">
@@ -69,7 +69,10 @@ const services = ref([
 ])
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "assets/scss/_colors";
+@import "assets/scss/_variables";
+
 .section-header {
   display: flex;
   flex-direction: row;
@@ -77,17 +80,24 @@ const services = ref([
   gap: 50px;
   align-items: center;
   margin-bottom: 25px;
-  @media (max-width: 900px) {
-    flex-direction: column;
+
+  @media (max-width: map-get($grid-breakpoints, lg)) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: auto auto;
+    gap: 1em;
   }
+
 
   h2 {
     white-space: nowrap;
   }
 
   p {
-    color: #77797DFF;
-    font-size: 17px;
+    @media (max-width: map-get($grid-breakpoints, lg)) {
+      grid-row: 2/3;
+      grid-column: 1/3;
+    }
   }
 
   button {
