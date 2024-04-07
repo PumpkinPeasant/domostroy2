@@ -160,6 +160,11 @@ header {
   .active {
     color: $dark-primary;
   }
+
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .toggleButton {

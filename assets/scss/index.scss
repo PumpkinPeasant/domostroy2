@@ -50,13 +50,7 @@ body {
 }
 
 main, section, header, .block {
-  padding: 0 11.5rem;
-  @media (max-width: 1300px) {
-    padding: 0 5rem;
-  }
-  @media (max-width: 900px) {
-    padding: 0 1rem;
-  }
+  padding: 0 var(--section-y-padding);
 }
 
 h1 {

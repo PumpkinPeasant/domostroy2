@@ -8,7 +8,7 @@ $grid-breakpoints: (
 );
 
 
-$header-width-desktop: 110px;
+$header-height: 110px;
 
 $section-padding-mobile: 3rem;
 $section-padding-desktop: 15rem;
@@ -31,5 +31,22 @@ $section-padding-desktop: 15rem;
     --fs-h3: 2.6667rem;
     --fs-h-capture: 1.5rem;
     --fs-body: 1.3333rem;
+  }
+}
+
+
+:root {
+  --section-y-padding: 1rem;
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+  :root {
+    --section-y-padding: 5rem;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+  :root {
+    --section-y-padding: 11.5rem;
   }
 }
