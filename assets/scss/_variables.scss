@@ -17,11 +17,11 @@ $section-padding-desktop: 15rem;
 :root {
   --base-fs: 12px;
 
-  --fs-h1: 2.3333rem;
+  --fs-h1: 2.5rem;
   --fs-h2: 1.6667rem;
   --fs-h3: 1.3333rem;
-  --fs-h-capture: 1rem;
-  --fs-body: 1rem;
+  --fs-h-capture: 1.15rem;
+  --fs-body: 1.15rem;
 }
 
 @media (min-width: 50em) {
@@ -36,7 +36,7 @@ $section-padding-desktop: 15rem;
 
 
 :root {
-  --section-y-padding: 1rem;
+  --section-y-padding: 2rem;
 }
 
 @media (min-width: map-get($grid-breakpoints, md)) {

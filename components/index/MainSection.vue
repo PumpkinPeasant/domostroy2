@@ -9,15 +9,15 @@
       </button>
       <div class="numbers">
         <div class="number">
-          <span class="digits h3">100<span class="symbol">+</span></span>
+          <span class="digits">100<span class="symbol">+</span></span>
           <span class="description">Договоров ежегодно</span>
         </div>
         <div class="number">
-          <span class="digits h3">700<span class="symbol">+</span></span>
+          <span class="digits">700<span class="symbol">+</span></span>
           <span class="description">Готовых проектов</span>
         </div>
         <div class="number">
-          <span class="digits h3">16<span class="symbol">+</span></span>
+          <span class="digits">16<span class="symbol">+</span></span>
           <span class="description">Лет на рынке</span>
         </div>
       </div>
@@ -50,6 +50,7 @@ main {
 
   @media (max-width: map-get($grid-breakpoints, lg)) {
     height: unset;
+    gap: unset;
     padding-right: 0;
   }
 }
@@ -60,7 +61,12 @@ main {
 
   p {
     margin-bottom: 30px;
-    color: #77797D;
+    color: $grey-secondary-darker;
+    font-weight: 600;
+
+    @media (max-width: map-get($grid-breakpoints, md)) {
+      width: 90%;
+    }
   }
 
   @media (max-width: map-get($grid-breakpoints, lg)) {
@@ -80,19 +86,36 @@ h1 {
   .number {
     display: flex;
     flex-direction: column;
+    font-size: 2.66rem;
+    font-weight: 700;
 
     .digits {
       color: $dark-primary;
+      letter-spacing: -1.5px;
     }
 
     .symbol {
       color: $red-accent;
-      margin-left: 5px;
+      margin-left: 2px;
     }
 
     .description{
       color: $grey-secondary;
-      font-size: 16px;
+      font-size: var(--fs-body);
+      @media (max-width:  map-get($grid-breakpoints, md)) {
+
+      }
+    }
+
+    @media (max-width:  map-get($grid-breakpoints, md)) {
+      font-size: 2.33rem;
+      flex: 1;
+      align-items: center;
+      text-align: center;
+
+      &:nth-last-child(1) {
+        margin-right: var(--section-y-padding);
+      }
     }
   }
 }
@@ -103,6 +126,10 @@ h1 {
   right: 0;
   width: auto;
   height: 80%;
+  @media (max-width:  map-get($grid-breakpoints, xl)) {
+    height: 70%;
+  }
+
   @media (max-width:  map-get($grid-breakpoints, lg)) {
     position: unset;
   }
