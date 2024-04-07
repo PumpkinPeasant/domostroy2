@@ -2,7 +2,8 @@
   <section>
     <div class="section-header">
       <h2>Виды работ</h2>
-      <p class="section-header_description heading-description">Мы предоставляем полный спектр услуг по отделочным работам: кровля,
+      <p class="section-header_description heading-description">Мы предоставляем полный спектр услуг по отделочным
+        работам: кровля,
         реставрация и обновление фасадов, установка заборов, а также установка сантехники и монтаж полов и потолков.</p>
       <a href="https://vk.com/im?media=&sel=-14943073" target="_blank">
         <button class="button-primary">
@@ -24,7 +25,7 @@
               <p>{{ service.title }}</p>
             </div>
             <div class="card-info_description">
-              <p>{{ service.description }}</p>
+              <p class="p-body">{{ service.description }}</p>
             </div>
           </div>
         </div>
@@ -118,7 +119,7 @@ const services = ref([
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
-  @media (max-width: 900px) {
+  @media (max-width: map-get($grid-breakpoints, lg)) {
     flex-direction: column;
   }
 
@@ -148,11 +149,9 @@ const services = ref([
       }
 
       .card-info_description {
-        margin-bottom: 20px;
-
         p {
-          font-size: 16px;
-          color: #535558;
+          color: $grey-secondary-darker;
+          margin-bottom: 1em;
         }
       }
     }

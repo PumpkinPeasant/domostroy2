@@ -101,6 +101,10 @@ button {
   font-size: var(--fs-body);
   border: none;
   transition: transform 0.2s ease;
+
+  @media (max-width: map-get($grid-breakpoints, md)) {
+    padding: 10px 14px;
+  }
 }
 
 button:active {

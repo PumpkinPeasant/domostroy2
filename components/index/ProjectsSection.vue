@@ -29,15 +29,15 @@
           <div class="card-info_item">
             <div class="card-info_element">
               <img src="@/assets/icons/projects/bed.svg" alt="bed">
-              <p class="card-info_text">{{ project.rooms }}</p>
+              <p class="card-info_text p-body">{{ project.rooms }}</p>
             </div>
             <div class="card-info_element">
               <img src="@/assets/icons/projects/arrow-left-right.svg" alt="arrow-left-right">
-              <p class="card-info_text">{{ project.size }}</p>
+              <p class="card-info_text p-body">{{ project.size }}</p>
             </div>
             <div class="card-info_element">
               <img src="@/assets/icons/projects/arrow-expand-all.svg" alt="arrow-expand-all">
-              <p class="card-info_text">{{ project.square }}</p>
+              <p class="card-info_text p-body">{{ project.square }}</p>
             </div>
           </div>
           <div class="card-info_action">
@@ -182,8 +182,7 @@ section::after{
         }
 
         .card-info_text {
-          font-size: 16px;
-          color: #535558;
+          color: $grey-secondary-darker;
         }
       }
 
