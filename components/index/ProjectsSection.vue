@@ -2,7 +2,8 @@
   <section>
     <div class="section-header">
       <h2>Наши проекты</h2>
-      <p class="section-header_description heading-description">Наша компания специализируется на строительстве домов, бань, беседок и
+      <p class="section-header_description heading-description">Наша компания специализируется на строительстве домов,
+        бань, беседок и
         хозяйственных строений. Наша команда
         мастеров готова воплотить любой проект в жизнь, независимо от его сложности.</p>
       <a href="https://vk.com/domctroy" target="_blank">
@@ -46,7 +47,7 @@
                 Подробнее
               </button>
             </a>
-            <p>от {{ project.price }} </p>
+            <p>от {{ project.price }} <span class="price_star">*</span></p>
           </div>
         </div>
       </div>
@@ -93,11 +94,11 @@ const projects = ref([
 @import "assets/scss/_colors";
 @import "assets/scss/_variables";
 
-section{
+section {
   position: relative;
 }
 
-section::after{
+section::after {
   content: "";
   z-index: -1;
   position: absolute;
@@ -203,12 +204,10 @@ section::after{
           font-size: 20px;
           color: black;
           font-weight: bold;
-
         }
       }
 
     }
   }
 }
-
 </style>

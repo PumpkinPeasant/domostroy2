@@ -19,6 +19,9 @@
           :src="Telegram"
           href="https://t.me/domostroi29"/>
     </section>
+    <section>
+     <div class="price_star">* Информация на сайте не является публичной офертой</div>
+    </section>
     <section class="footer-logo">
       <img src="@/assets/icons/footer-logo.svg" alt="">
     </section>
@@ -81,5 +84,12 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+}
+.price_star {
+  color: #77797D;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
 }
 </style>

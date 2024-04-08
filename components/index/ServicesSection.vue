@@ -35,7 +35,7 @@
               Подробнее
             </button>
           </a>
-          <p>{{ service.price }} </p>
+          <p>{{ service.price }} <span class="price_star">*</span></p>
         </div>
       </div>
     </div>
@@ -169,5 +169,10 @@ const services = ref([
       }
     }
   }
+}
+.price_star {
+  color: #77797D;
+  font-weight: normal;
+  font-size: 16px;
 }
 </style>
