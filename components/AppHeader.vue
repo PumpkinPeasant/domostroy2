@@ -241,6 +241,7 @@ header {
   svg {
     color: #282A2E;
     height: 20px;
+    transform: rotate(180deg);
   }
 }
 
