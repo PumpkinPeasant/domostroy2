@@ -19,7 +19,7 @@ import type { BehaviorType } from '@yandex/ymaps3-types';
 
 const coordinates = [64.557177, 39.859165];
 const controls = ["zoomControl", "geolocationControl"];
-const behaviors = ref<BehaviorType[]>(['drag', 'pinchZoom', 'dblClick', 'oneFingerZoom']);
+const behaviors = ref<BehaviorType[]>(['drag', 'pinchZoom', 'dblClick', 'oneFingerZoom', 'pinchZoom']);
 
 </script>
 
