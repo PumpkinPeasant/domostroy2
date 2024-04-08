@@ -13,6 +13,12 @@
   font: inherit;
 }
 
+// Добавлено для анимации оверлея
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 ul[role='list'],
 ol[role='list'] {
   list-style: none;

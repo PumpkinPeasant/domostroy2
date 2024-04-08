@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@yandex/ymaps3-types": "^0.0.22",
+    "gsap": "^3.12.5",
     "sass": "^1.68.0",
     "vue-yandex-maps": "^1.1.0"
   }

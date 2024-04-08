@@ -1,4 +1,5 @@
 <template>
+  <LoadingOverlay/>
   <MainSection id="top"/>
   <BenefitsSection />
   <ProjectsSection id="projects"/>
