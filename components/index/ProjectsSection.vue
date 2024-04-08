@@ -155,13 +155,17 @@ section::after {
   align-items: center;
   @media (max-width: 1300px) {
     flex-direction: column;
+    align-items: center;
   }
 
   .card {
     flex-grow: 1;
     flex-basis: 0;
     box-shadow: 0 11px 44px 16px rgba(14, 48, 114, .05);
-    max-width: 400px;
+
+    @media (max-width: 1300px) {
+      max-width: 400px;
+    }
 
     img {
       object-fit: cover;
@@ -211,5 +215,10 @@ section::after {
 
     }
   }
+}
+.price_star {
+  color: #77797D;
+  font-weight: normal;
+  font-size: 16px;
 }
 </style>

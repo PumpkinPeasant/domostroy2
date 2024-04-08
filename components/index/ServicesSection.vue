@@ -130,8 +130,9 @@ const services = ref([
     justify-content: space-between;
     flex-grow: 1;
     flex-basis: 0;
-    max-width: 400px;
-
+    @media (max-width: 1300px) {
+      max-width: 400px;
+    }
     img {
     }
 
