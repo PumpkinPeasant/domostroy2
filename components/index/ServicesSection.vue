@@ -119,8 +119,9 @@ const services = ref([
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
-  @media (max-width: map-get($grid-breakpoints, lg)) {
+  @media (max-width: map-get($grid-breakpoints, xl)) {
     flex-direction: column;
+    align-items: center;
   }
 
   .card {
@@ -129,6 +130,7 @@ const services = ref([
     justify-content: space-between;
     flex-grow: 1;
     flex-basis: 0;
+    max-width: 400px;
 
     img {
     }

@@ -152,7 +152,8 @@ section::after {
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
-  @media (max-width: 900px) {
+  align-items: center;
+  @media (max-width: 1300px) {
     flex-direction: column;
   }
 
@@ -160,6 +161,7 @@ section::after {
     flex-grow: 1;
     flex-basis: 0;
     box-shadow: 0 11px 44px 16px rgba(14, 48, 114, .05);
+    max-width: 400px;
 
     img {
       object-fit: cover;
