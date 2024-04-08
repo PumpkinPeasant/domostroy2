@@ -5,6 +5,7 @@
         :controls="controls"
         zoom="16"
         :coordinates="coordinates"
+        :behaviors="behaviors"
     >
       <yandex-marker marker-id="1" :coordinates="coordinates">
         <div class="marker"/>
@@ -12,11 +13,13 @@
     </yandex-map>
   </client-only>
 </template>
-<script setup>
+<script setup lang="ts">
 import {YandexMap, YandexMarker} from 'vue-yandex-maps'
+import type { BehaviorType } from '@yandex/ymaps3-types';
 
 const coordinates = [64.557177, 39.859165];
 const controls = ["zoomControl", "geolocationControl"];
+const behaviors = ref<BehaviorType[]>(['drag', 'pinchZoom', 'dblClick', 'oneFingerZoom']);
 
 </script>
 
