@@ -1,6 +1,5 @@
 export default defineNuxtConfig({
     // @ts-ignore
-    plugins: [],
     css: ['~/assets/scss/index.scss', '~/assets/scss/_colors.scss', '~/assets/scss/_variables.scss'],
     dev: true,
     target: 'static',
@@ -31,5 +30,19 @@ export default defineNuxtConfig({
                 },
             ]
         },
-    }
+    },
+    build: {
+        // @ts-ignore
+        postcss: {
+            plugins: {
+                'postcss-preset-env': {
+                    autoprefixer: { grid: true },
+                    stage: 3,
+                    features: {
+                        'nesting-rules': true
+                    }
+                }
+            }
+        }
+    },
 })
