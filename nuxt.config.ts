@@ -9,11 +9,11 @@ export default defineNuxtConfig({
             {
                 id: '96975434',
                 webvisor: true,
-                // consoleLog: true,
-                // clickmap: true,
-                // useCDN: false,
-                // trackLinks: true,
-                // accurateTrackBounce: true,
+                consoleLog: true,
+                clickmap: true,
+                useCDN: false,
+                trackLinks: true,
+                accurateTrackBounce: true,
             }
         ]
     ],
