@@ -3,6 +3,20 @@ export default defineNuxtConfig({
     css: ['~/assets/scss/index.scss', '~/assets/scss/_colors.scss', '~/assets/scss/_variables.scss'],
     dev: true,
     target: 'static',
+    modules: [
+        [
+            'yandex-metrika-module-nuxt3',
+            {
+                id: '96975434',
+                webvisor: true,
+                // consoleLog: true,
+                // clickmap: true,
+                // useCDN: false,
+                // trackLinks: true,
+                // accurateTrackBounce: true,
+            }
+        ]
+    ],
     app: {
         head: {
             title: 'Домострой | Каркасное строительство',
