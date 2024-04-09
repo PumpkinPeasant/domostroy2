@@ -51,7 +51,7 @@ main {
   justify-content: center;
   gap: 3em;
 
-  @media (max-width: map-get($grid-breakpoints, xxl)) {
+  @media (min-width: map-get($grid-breakpoints, xxl)) {
     justify-content: flex-end;
   }
 
