@@ -7,7 +7,7 @@ export default defineNuxtConfig({
         [
             'yandex-metrika-module-nuxt3',
             {
-                id: '96975434',
+                id: process.env.YANDEX_METRICA,
                 webvisor: true,
                 consoleLog: true,
                 clickmap: true,
