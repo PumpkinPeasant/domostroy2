@@ -4,14 +4,12 @@
       <h1>Строительство домов <br/>в Северодвинске</h1>
       <p class="h-capture">Дом вашей мечты - в ваших руках! Закажите звонок нашего специалиста,<br/>
         и мы поможем воплотить вашу мечту в реальность.</p>
-      <div class="btn">
-        <button class="button-primary">
-          <a class="button-primary" href="https://vk.com/im?media=&sel=-14943073"
-             target="_blank">
-            Связаться с нами
-          </a>
-        </button>
-      </div>
+      <button class="button-primary">
+        <a href="https://vk.com/im?media=&sel=-14943073"
+           target="_blank">
+          Связаться с нами
+        </a>
+      </button>
       <div class="numbers">
         <div class="number">
           <span class="digits">100<span class="symbol">+</span></span>
@@ -35,39 +33,8 @@
 </template>
 
 <script lang="ts" setup>
-import {onMounted} from 'vue';
-import gsap from 'gsap';
+import Roof from '~/assets/images/roof.png'
 
-import Roof from '~/assets/images/roof.png';
-
-
-const tl = gsap.timeline();
-const animateElements = () => {
-  const selectors = ['.main h1', '.main .h-capture', '.btn'];
-  const numberElements = document.querySelectorAll('.number');
-  selectors.forEach((selector, index) => {
-    tl.from(selector, {
-      opacity: 0,
-      y: 20,
-      duration: 0.9,
-      ease: 'expo.inOut',
-    });
-  });
-
-  numberElements.forEach((number, index) => {
-    tl.from(number, {
-      opacity: 0,
-      y: 20,
-      duration: 0.2,
-      ease: 'power2.out',
-    });
-  });
-};
-
-
-onMounted(() => {
-  gsap.delayedCall(2, animateElements);
-});
 </script>
 
 <style scoped lang="scss">
@@ -142,15 +109,15 @@ h1 {
       margin-left: 2px;
     }
 
-    .description {
+    .description{
       color: $grey-secondary;
       font-size: var(--fs-body);
-      @media (max-width: map-get($grid-breakpoints, md)) {
+      @media (max-width:  map-get($grid-breakpoints, md)) {
 
       }
     }
 
-    @media (max-width: map-get($grid-breakpoints, md)) {
+    @media (max-width:  map-get($grid-breakpoints, md)) {
       font-size: 2.33rem;
       flex: 1;
       align-items: center;
@@ -169,11 +136,11 @@ h1 {
   right: 0;
   width: auto;
   height: 80%;
-  @media (max-width: map-get($grid-breakpoints, xl)) {
+  @media (max-width:  map-get($grid-breakpoints, xl)) {
     height: 70%;
   }
 
-  @media (max-width: map-get($grid-breakpoints, lg)) {
+  @media (max-width:  map-get($grid-breakpoints, lg)) {
     position: unset;
   }
 }
