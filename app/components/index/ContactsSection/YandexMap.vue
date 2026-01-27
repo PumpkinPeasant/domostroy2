@@ -3,7 +3,7 @@
     <yandex-map
         style="padding: 0 !important"
         :controls="controls"
-        zoom="16"
+        :zoom="16"
         :coordinates="coordinates"
         :behaviors="behaviors"
     >
