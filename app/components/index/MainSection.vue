@@ -27,13 +27,12 @@
     </div>
     <img class="roof-img"
          alt="Крыша"
-         :src="Roof"
+         src="/images/roof.png"
     />
   </main>
 </template>
 
 <script lang="ts" setup>
-import Roof from '~/assets/images/roof.png'
 
 </script>
 
