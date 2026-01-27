@@ -8,11 +8,13 @@
             :key="index"
             class="item"
         >
-          <img
+          <nuxt-img
+              height="80"
+              width="80"
               class="icon"
               :src="benefit.img"
-              :alt="benefit.img"
-          >
+              :alt="benefit.alt"
+          />
           <div>
             <p class="h-capture">{{ benefit.title }}</p>
             <p class="p-body">{{ benefit.description }}</p>
@@ -24,25 +26,24 @@
 </template>
 
 <script setup>
-import Quality from '~/assets/icons/quality.svg'
-import Contract from '~/assets/icons/contract.svg'
-import Calendar from '~/assets/icons/calendar.svg'
-
 const benefits = ref([
   {
-    img: Quality,
+    img: '/icons/benefits/quality.svg',
     title: 'Качество',
-    description: 'В работе мы полностью придерживаемся стандартов качества, и осуществляем любые Ваши задумки.'
+    description: 'В работе мы полностью придерживаемся стандартов качества, и осуществляем любые Ваши задумки.',
+    alt: 'Иконка качество'
   },
   {
-    img: Contract,
+    img: '/icons/benefits/contract.svg',
     title: 'Договоры',
-    description: 'Договоры заключаются с фиксированной суммой. Подготовим всю рабочую документацию и обоснуем каждый потраченный рубль.'
+    description: 'Договоры заключаются с фиксированной суммой. Подготовим всю рабочую документацию и обоснуем каждый потраченный рубль.',
+    alt: 'Иконка договоров'
   },
   {
-    img: Calendar,
+    img: '/icons/benefits/calendar.svg',
     title: 'Сроки',
-    description: 'Мы всегда указываем реальные сроки и придерживаемся их! А также скидываем ежедневные отчеты в онлайн-чат.'
+    description: 'Мы всегда указываем реальные сроки и придерживаемся их! А также скидываем ежедневные отчеты в онлайн-чат.',
+    alt: 'Иконка сроков'
   }
 ])
 

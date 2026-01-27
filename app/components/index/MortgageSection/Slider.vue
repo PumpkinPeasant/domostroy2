@@ -6,7 +6,8 @@
           v-show="slide.id == active"
           :key="index">
         <a :href="slide.href" target="_blank">
-          <img :src="slide.img" :alt="slide.alt"/>
+          <!--          TODO: Добавить ширину и высоту-->
+          <nuxt-img :src="slide.img" :alt="slide.alt"/>
         </a>
       </div>
     </div>

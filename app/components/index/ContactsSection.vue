@@ -7,22 +7,22 @@
         <div class="card-contact">
           <h2 class="main-title">Наш офис</h2>
           <div class="card_element">
-            <img src="@/assets/icons/contact/map.svg" alt="map">
+            <nuxt-img width="25" height="36" src="/icons/contact/map.svg" alt="Иконка указателя"/>
             <div class="link">
               <p>г. Северодвинск,</p>
               <p>Архангельское шоссе, 29К3, этаж 2</p>
             </div>
           </div>
           <div class="card_element">
-            <img src="@/assets/icons/contact/mail.svg" alt="map">
+            <nuxt-img width="25" height="18" src="/icons/contact/mail.svg" alt="Иконка почты"/>
             <p><a href="mailto:domostroi@lenta.ru" class="email link">domostroi@lenta.ru</a></p>
           </div>
           <div class="card_element">
-            <img src="@/assets/icons/contact/phone.svg" alt="map">
+            <nuxt-img width="25" height="25" src="/icons/contact/phone.svg" alt="Иконка телефона"/>
             <p><a class="contact_section link" href="tel:+7 (911) 563-43-75">+7 (911) 563-43-75</a></p>
           </div>
           <div class="card_element">
-            <img src="@/assets/icons/contact/phone.svg" alt="map">
+            <nuxt-img width="25" height="25" src="/icons/contact/phone.svg" alt="Иконка телефона"/>
             <p><a class="contact_section link" href="tel:+7 (953) 262 75 84">+7 (953) 262 75 84</a></p>
           </div>
         </div>
@@ -30,14 +30,14 @@
         <div class="icons">
           <media-icon
               width="40"
-              alt="vk"
-              :src="VK"
+              alt="Иконка VK"
+              src="/icons/vk.svg"
               href="https://vk.com/domostroi_29"
           />
           <media-icon
               width="40"
-              alt="telegram"
-              :src="Telegram"
+              alt="Иконка Telegram"
+              src="/icons/telegram.svg"
               href="https://t.me/domostroi29"
           />
         </div>
@@ -50,8 +50,6 @@
 <script setup>
 import YandexMap from "~/components/index/ContactsSection/YandexMap.vue";
 import MediaIcon from "~/components/index/UI/MediaIcon.vue";
-import Telegram from "~/assets/icons/telegram.svg";
-import VK from "~/assets/icons/vk.svg";
 
 </script>
 
@@ -142,7 +140,7 @@ section {
     justify-content: flex-start;
     gap: 10px;
 
-    .icon{
+    .icon {
       width: 35px;
     }
   }

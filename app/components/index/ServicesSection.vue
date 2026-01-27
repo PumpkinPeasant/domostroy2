@@ -8,7 +8,7 @@
       <a href="https://vk.com/im?media=&sel=-14943073" target="_blank">
         <button class="button-primary">
           Все виды работ
-          <img src="@/assets/icons/chevron.svg" alt="chevron">
+          <nuxt-img width="8" height="13" src="/icons/chevron.svg" alt="Иконка стрелки вправо"/>
         </button>
       </a>
     </div>
@@ -19,7 +19,8 @@
           class="card"
       >
         <div>
-          <img :src="service.image" :alt="service.image">
+<!--          TODO: Добавить ширину и высоту-->
+          <nuxt-img width="" height="" :src="service.image" :alt="service.alt"/>
           <div class="card-info">
             <div class="card-info_title">
               <p>{{ service.title }}</p>
@@ -44,28 +45,29 @@
 
 <script setup>
 import {ref} from "vue";
-import Facade from '@/assets/images/services/facade.png'
-import Fence from '@/assets/images/services/fence.png'
-import Roofs from '@/assets/images/services/roofs.png'
 
 const services = ref([
   {
     title: "Установка заборов",
-    image: Fence,
+    image: '/images/services/fence.png',
     description: "Основное наше направление по установке заборов, это бюджетный сегмент, заборы, которые может позволить себе каждый, не в ущерб качеству и долговечности.",
-    price: 'от 1 700₽/пог.м'
+    price: 'от 1 700₽/пог.м',
+    alt: 'Забор'
   },
   {
     title: "Обновление фасадов",
-    image: Facade,
+    image: '/images/services/facade.png',
     description: "Монтаж любых видов кровли, сотрудничаем с крупнейшими магазинам, что позволяет сделать покупку максимально выгодной.",
-    price: 'от 400₽/м²'
+    price: 'от 400₽/м²',
+    alt: 'Фасад дома'
+
   },
   {
     title: "Кровельные работы",
-    image: Roofs,
+    image: '/images/services/roofs.png',
     description: "Мы производим монтаж любых видов кровли и сотрудничаем с крупнейшими магазинам, что позволяет сделать покупку максимально выгодной.",
-    price: 'от 450₽/м²'
+    price: 'от 450₽/м²',
+    alt: 'Кровля крыши'
   },
 ])
 </script>

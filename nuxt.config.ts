@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     target: 'static',
     modules: [
         [
+            "@nuxt/image",
             'yandex-metrika-module-nuxt3',
             {
                 id: process.env.YANDEX_METRICA,

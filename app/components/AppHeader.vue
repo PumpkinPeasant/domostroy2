@@ -2,7 +2,7 @@
   <header :class="navClass">
     <div class="header__logo">
       <NuxtLink to="/">
-        <img :src="Logo" alt="Домострой лого"/>
+        <nuxt-img height="40" width="40" src="/images/logo.svg" alt="Домострой логотип"/>
         <span>Домострой</span>
       </NuxtLink>
     </div>
@@ -20,7 +20,7 @@
       </ul>
     </nav>
     <a v-if="!mobileSize" class="contact_section button-primary" href="tel:+7 (911) 563-43-75">
-      <img src="../assets/icons/phone-white.svg" alt="phone">
+      <nuxt-img height="20" width="20" src="/icons/phone-white.svg" alt="Иконка телефона"/>
       +7 (911) 563-43-75
     </a>
     <div
@@ -28,7 +28,7 @@
         @click="toggleMenu"
         class="menu"
         style="cursor: pointer">
-      <img src="@/assets/icons/header/menu.svg" alt="menu">
+      <nuxt-img height="16" width="23" src="/icons/menu.svg" alt="Иконка меню"/>
     </div>
   </header>
   <Transition :duration="550" name="nested">
@@ -38,7 +38,7 @@
       <div class="sidebar-header">
         <div class="header__logo">
           <NuxtLink to="/">
-            <img :src="Logo" alt="Домострой лого"/>
+            <nuxt-img height="40" width="40" src="/images/logo.svg" alt="Домострой логотип"/>
             <span>Домострой</span>
           </NuxtLink>
         </div>
@@ -63,7 +63,6 @@
 
 <script setup lang="ts">
 import {ref, watch} from 'vue'
-import Logo from '~/assets/images/logo.svg'
 import Arrow from "~/components/index/UI/Arrow.vue";
 
 const router = useRouter();

@@ -9,7 +9,7 @@
       <a href="https://vk.com/domctroy" target="_blank">
         <button class="button-primary">
           Все проекты
-          <img src="@/assets/icons/chevron.svg" alt="chevron">
+          <nuxt-img width="8" height="13" src="/icons/chevron.svg" alt="Иконка стрелки вправо"/>
         </button>
       </a>
     </div>
@@ -19,25 +19,26 @@
           :key="index"
           class="card"
       >
-        <img :src="project.image" :alt="project.image">
+        <!--          TODO: Добавить ширину и высоту-->
+        <nuxt-img  width="" height="" :src="project.image" :alt="project.alt"/>
         <div class="card-info">
           <div class="card-info_title">
             <div class="card-info_element">
-              <img src="@/assets/icons/projects/location.svg" alt="location">
+              <nuxt-img width="18" height="24" src="/icons/projects/location.svg" alt="Иконка указателя локации"/>
               <p class="p-body">{{ project.location }}</p>
             </div>
           </div>
           <div class="card-info_item">
             <div class="card-info_element">
-              <img src="@/assets/icons/projects/bed.svg" alt="bed">
+              <nuxt-img width="24" height="18" src="/icons/projects/bed.svg" alt="Иконка кровати" />
               <p class="card-info_text p-body">{{ project.rooms }}</p>
             </div>
             <div class="card-info_element">
-              <img src="@/assets/icons/projects/arrow-left-right.svg" alt="arrow-left-right">
+              <nuxt-img width="27" height="14" src="/icons/projects/arrow-left-right.svg" alt="Иконка стрелки влево-вправо"/>
               <p class="card-info_text p-body">{{ project.size }}</p>
             </div>
             <div class="card-info_element">
-              <img src="@/assets/icons/projects/arrow-expand-all.svg" alt="arrow-expand-all">
+              <nuxt-img width="22" height="22" src="/icons/projects/arrow-expand-all.svg" alt="Иконка расширить"/>
               <p class="card-info_text p-body">{{ project.square }}</p>
             </div>
           </div>
@@ -56,36 +57,35 @@
 </template>
 
 <script setup>
-import Project1 from '@/assets/images/projects/project1.png'
-import Project2 from '@/assets/images/projects/project2.png'
-import Project3 from '@/assets/images/projects/project3.png'
-
 import {ref} from 'vue'
 
 const projects = ref([
   {
-    image: Project3,
+    image: '/images/projects/project3.png',
     location: 'СНТ Строитель',
     rooms: '3 комнаты',
     size: '8x10 м',
     square: '80 м²',
-    price: '2 300 000 ₽'
+    price: '2 300 000 ₽',
+    alt: 'Одноэтажный дом 80 кв.м в СНТ Строитель'
   },
   {
-    image: Project2,
+    image: '/images/projects/project2.png',
     location: 'СНТ Беломор',
     rooms: '4 комнаты',
     size: '6x8 м',
     square: '96 м²',
-    price: '2 800 000 ₽'
+    price: '2 800 000 ₽',
+    alt: 'Двухэтажный дом 96 кв.м в СНТ Беломор'
   },
   {
-    image: Project1,
+    image: '/images/projects/project1.png',
     location: 'СНТ Поморочка',
     rooms: '6 комнат',
     size: '8x11 м',
     square: '88+55 м²',
-    price: '3 300 000 ₽'
+    price: '3 300 000 ₽',
+    alt: 'Одноэтажный дом 88+55 кв.м в СНТ Поморочка'
   },
 ])
 </script>

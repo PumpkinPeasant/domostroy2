@@ -1,14 +1,13 @@
 <template>
   <div class="overlay">
     <div class="logo">
-      <img :src="Logo" alt="Домострой лого"/>
+      <nuxt-img width="70" height="70" src="/images/logo.svg" alt="Домострой логотип"/>
       <span>Домострой</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import Logo from '~/assets/images/logo.svg'
 import gsap from "gsap";
 
 const enableScroll = () => {

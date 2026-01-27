@@ -25,9 +25,13 @@
         </div>
       </div>
     </div>
-    <img class="roof-img"
-         alt="Крыша"
-         src="/images/roof.png"
+    <!--          TODO: Добавить ширину и высоту-->
+    <nuxt-img
+        width=""
+        heigth=""
+        class="roof-img"
+        alt="Крыша"
+        src="/images/roof.png"
     />
   </main>
 </template>
@@ -108,15 +112,15 @@ h1 {
       margin-left: 2px;
     }
 
-    .description{
+    .description {
       color: $grey-secondary;
       font-size: var(--fs-body);
-      @media (max-width:  map-get($grid-breakpoints, md)) {
+      @media (max-width: map-get($grid-breakpoints, md)) {
 
       }
     }
 
-    @media (max-width:  map-get($grid-breakpoints, md)) {
+    @media (max-width: map-get($grid-breakpoints, md)) {
       font-size: 2.33rem;
       flex: 1;
       align-items: center;
@@ -135,11 +139,11 @@ h1 {
   right: 0;
   width: auto;
   height: 80%;
-  @media (max-width:  map-get($grid-breakpoints, xl)) {
+  @media (max-width: map-get($grid-breakpoints, xl)) {
     height: 70%;
   }
 
-  @media (max-width:  map-get($grid-breakpoints, lg)) {
+  @media (max-width: map-get($grid-breakpoints, lg)) {
     position: unset;
   }
 }

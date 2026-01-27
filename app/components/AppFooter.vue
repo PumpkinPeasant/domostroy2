@@ -23,15 +23,15 @@
      <div class="price_star">* Информация на сайте не является публичной офертой</div>
     </section>
     <section class="footer-logo">
-      <img src="@/assets/icons/footer-logo.svg" alt="">
+      <nuxt-img width="180" height="22" src="/images/footer-logo.svg" alt="Домострой логотип 2026"/>
     </section>
   </footer>
 </template>
 
 <script setup>
 
-import Telegram from "~/assets/icons/telegram.svg";
-import VK from "~/assets/icons/vk.svg";
+import Telegram from "~~/public/icons/telegram.svg";
+import VK from "~~/public/icons/vk.svg";
 import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 </script>
 

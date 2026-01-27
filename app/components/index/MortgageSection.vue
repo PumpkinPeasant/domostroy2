@@ -7,27 +7,23 @@
 
 <script lang="ts" setup>
 import Slider from "./MortgageSection/Slider.vue";
-import {ref} from "vue";
-import Mortgage1 from "assets/images/mortgage1.png";
-import Mortgage2 from "assets/images/mortgage2.png";
-import Mortgage3 from "assets/images/mortgage3.png";
 
 const slides = [
   {
     id: 1,
-    img: Mortgage1,
+    img: "/images/mortgage/mortgage1.png",
     alt: "Ипотека в Россельхозбанке",
     href: 'https://svoe-selo.ru/partners/obshhestvo-s-ogranichennoj-otvetstvennostyu-sistema-2/house-projects'
   },
   {
     id: 2,
-    img: Mortgage2,
+    img: "/images/mortgage/mortgage2.png",
     alt: "Ипотека в Сбербанке",
     href: 'http://www.sberbank.ru/ru/person/credits/home/building'
   },
   {
     id: 3,
-    img: Mortgage3,
+    img: "/images/mortgage/mortgage3.png",
     alt: "Ипотека в Почтабанке",
     href: 'https://www.pochtabank.ru/service/mortgage/ipoteka_na_stroitelstvo_doma'
 

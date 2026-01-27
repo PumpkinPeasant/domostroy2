@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const props = defineProps({
   href: {type: String, required: true},
-  src: {type: Object, required: true},
+  src: {type: String, required: true},
   alt: {type: String, required: true},
   width: {type: String, default: '32'}
 });
@@ -10,10 +10,11 @@ const props = defineProps({
 <template>
   <div class="icon">
     <a :href="href" class="icon-link" target="_blank">
-      <img
+      <nuxt-img
           :width="width"
+          :height="width"
           :src="src"
-          :alt="alt">
+          :alt="alt"/>
     </a>
   </div>
 </template>
