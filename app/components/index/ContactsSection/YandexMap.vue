@@ -17,7 +17,7 @@
 import {YandexMap, YandexMarker} from 'vue-yandex-maps'
 import type { BehaviorType } from '@yandex/ymaps3-types';
 
-const coordinates = [64.578008, 39.868679];
+const coordinates = [64.577881, 39.869418];
 const controls = ["zoomControl", "geolocationControl"];
 const behaviors = ref<BehaviorType[]>(['drag', 'pinchZoom', 'dblClick', 'oneFingerZoom', 'pinchZoom']);
 
