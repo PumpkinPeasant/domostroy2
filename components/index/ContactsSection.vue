@@ -10,7 +10,7 @@
             <img src="@/assets/icons/contact/map.svg" alt="map">
             <div class="link">
               <p>г. Северодвинск,</p>
-              <p>ул. Железнодоражная 54а, офис 5</p>
+              <p>Архангельское шоссе, 29К3, этаж 2</p>
             </div>
           </div>
           <div class="card_element">
