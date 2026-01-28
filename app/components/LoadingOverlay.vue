@@ -33,8 +33,6 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_variables";
-
 .overlay {
   z-index: 1005;
   position: fixed;
@@ -57,13 +55,13 @@ onMounted(() => {
       width: 70px;
       margin-right: 16px;
 
-      @media (max-width: map-get($grid-breakpoints, md)) {
+      @media (max-width: 768px) {
         width: 55px;
         margin-right: 8px;
       }
     }
 
-    @media (max-width: map-get($grid-breakpoints, md)) {
+    @media (max-width: 768px) {
       font-size: 26px;
     }
   }

@@ -91,8 +91,6 @@ const projects = ref([
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_variables";
-
 section {
   position: relative;
 }
@@ -115,7 +113,7 @@ section::after {
   gap: 50px;
   align-items: center;
   margin-bottom: 25px;
-  @media (max-width: map-get($grid-breakpoints, lg)) {
+  @media (max-width: 992px) {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-auto-rows: auto auto;
@@ -127,7 +125,7 @@ section::after {
   }
 
   p {
-    @media (max-width: map-get($grid-breakpoints, lg)) {
+    @media (max-width: 992px) {
       grid-row: 2/3;
       grid-column: 1/3;
     }

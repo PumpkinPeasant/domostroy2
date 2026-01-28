@@ -73,8 +73,6 @@ const services = ref([
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_variables";
-
 .section-header {
   display: flex;
   flex-direction: row;
@@ -83,7 +81,7 @@ const services = ref([
   align-items: center;
   margin-bottom: 25px;
 
-  @media (max-width: map-get($grid-breakpoints, lg)) {
+  @media (max-width: 992px) {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-auto-rows: auto auto;
@@ -96,7 +94,7 @@ const services = ref([
   }
 
   p {
-    @media (max-width: map-get($grid-breakpoints, lg)) {
+    @media (max-width: 992px) {
       grid-row: 2/3;
       grid-column: 1/3;
     }
@@ -120,7 +118,7 @@ const services = ref([
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
-  @media (max-width: map-get($grid-breakpoints, xl)) {
+  @media (max-width: 1200px) {
     flex-direction: column;
     align-items: center;
   }

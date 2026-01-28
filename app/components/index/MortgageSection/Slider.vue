@@ -54,8 +54,6 @@ function move(amount) {
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_colors";
-@import "assets/scss/_variables";
 $primary: #221e21;
 
 .slider {
@@ -123,13 +121,13 @@ $primary: #221e21;
   align-items: center;
   justify-content: center;
 
-  @media (max-width: map-get($grid-breakpoints, lg)) {
+  @media (max-width: 992px) {
     background: white;
     width: 30px;
     height: 30px;
   }
 
-  @media (max-width: map-get($grid-breakpoints, sm)) {
+  @media (max-width: 576px) {
     width: 25px;
     height: 25px;
     top: 45%;
@@ -139,11 +137,11 @@ $primary: #221e21;
     height: 20px;
     color: #fff;
 
-    @media (max-width: map-get($grid-breakpoints, lg)) {
+    @media (max-width: 992px) {
       color: black;
     }
 
-    @media (max-width: map-get($grid-breakpoints, sm)) {
+    @media (max-width: 576px) {
       height: 15px;
     }
   }
@@ -166,7 +164,7 @@ $primary: #221e21;
   text-indent: 2px;
   padding-left: 2px;
 
-  @media (max-width: map-get($grid-breakpoints, md)) {
+  @media (max-width: 768px) {
     transform: translateY(-50%);
     margin-right: 10px;
   }
@@ -174,7 +172,7 @@ $primary: #221e21;
   &:hover, &:active {
     transform: translateY(-50%) scale(1.2) translateX(50%);
 
-    @media (max-width: map-get($grid-breakpoints, md)) {
+    @media (max-width: 768px) {
       transform: translateY(-50%) scale(1.2);
     }
   }
@@ -192,7 +190,7 @@ $primary: #221e21;
   text-indent: 2px;
   padding-right: 3px;
 
-  @media (max-width: map-get($grid-breakpoints, md)) {
+  @media (max-width: 768px) {
     transform: translateY(-50%);
     margin-left: 10px;
   }
@@ -200,7 +198,7 @@ $primary: #221e21;
   &:hover, &:active {
     transform: translateY(-50%) scale(1.2) translateX(-50%);
 
-    @media (max-width: map-get($grid-breakpoints, md)) {
+    @media (max-width: 768px) {
       transform: translateY(-50%) scale(1.2);
     }
   }

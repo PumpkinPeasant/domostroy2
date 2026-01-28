@@ -1,5 +1,3 @@
-@import "assets/scss/_variables";
-
 /* CSS Reset */
 
 *, *::before, *::after {
@@ -12,8 +10,7 @@
   font: inherit;
 }
 
-// Добавлено для анимации оверлея
-body{
+body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -62,22 +59,28 @@ h1 {
   font-size: var(--fs-h1);
   font-weight: 600;
   letter-spacing: -1.7px;
+}
 
-  @media (max-width: map-get($grid-breakpoints, md)) {
+@media (max-width: 768px) {
+  h1 {
     font-weight: 700;
   }
+}
 
-  //Небольшой костыль для горизонтального расположения экрана на мобилке
-  @media (max-height: 685px) AND (orientation: landscape) AND (max-width: 900px) {
+@media (max-height: 685px) AND (orientation: landscape) AND (max-width: 900px) {
+  h1 {
     font-size: 30px;
   }
 }
 
+
 h2 {
   font-size: var(--fs-h2);
+}
 
-  @media (max-width: map-get($grid-breakpoints, md)) {
-      font-weight: 700;
+@media (max-width: 768px) {
+  h2 {
+    font-weight: 700;
   }
 }
 
@@ -111,8 +114,10 @@ button {
   font-size: var(--fs-body);
   border: none;
   transition: transform 0.2s ease;
+}
 
-  @media (max-width: map-get($grid-breakpoints, md)) {
+@media (max-width: 768px) {
+  button {
     padding: 10px 14px;
   }
 }
@@ -127,11 +132,12 @@ button:active {
   color: var(--clr-neutral-100);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-  &:hover, &:active{
-    outline: 2px solid var(--clr-neutral-800);
-  }
 }
+
+.button-primary:hover, .button-primary:active {
+  outline: 2px solid var(--clr-neutral-800);
+}
+
 
 .button-secondary {
   background-color: var(--clr-accent-400);
@@ -139,12 +145,13 @@ button:active {
   cursor: pointer;
   font-weight: bold;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-  &:hover, &:active{
-    outline: 2px solid var(--clr-accent-500);
-    background: none;
-  }
 }
+
+.button-secondary:hover, .button-secondary:active {
+  outline: 2px solid var(--clr-accent-500);
+  background: none;
+}
+
 
 .p-body {
   font-size: var(--fs-body);
@@ -158,8 +165,9 @@ button:active {
 
 .link {
   transition: font-weight 0.2s ease;
-  &:hover, &:active {
-    color: var(--clr-neutral-800) !important;
-    font-weight: 600;
-  }
+}
+
+.link:hover, .link:active {
+  color: var(--clr-neutral-800) !important;
+  font-weight: 600;
 }

@@ -24,12 +24,10 @@ const behaviors = ref<BehaviorType[]>(['drag', 'pinchZoom', 'dblClick', 'oneFing
 </script>
 
 <style lang="scss">
-@import "assets/scss/_variables";
-
 .yandex-container {
   height: 75vh;
 
-  @media (max-width: map-get($grid-breakpoints, lg)) {
+  @media (max-width: 992px) {
     height: 50vh;
   }
 }

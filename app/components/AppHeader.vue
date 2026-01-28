@@ -126,8 +126,6 @@ function handleWidth() {
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_variables";
-
 header {
   width: 100%;
   background-color: transparent;
@@ -164,7 +162,7 @@ header {
     font-weight: 600;
   }
 
-  @media (max-width: map-get($grid-breakpoints, md)) {
+  @media (max-width: 768px) {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
@@ -187,7 +185,7 @@ header {
   padding-bottom: 2rem;
   background-color: var(--clr-neutral-200);
 
-  @media (max-width: map-get($grid-breakpoints, md)) {
+  @media (max-width: 768px) {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }

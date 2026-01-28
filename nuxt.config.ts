@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
     // @ts-ignore
-    css: ['~/assets/scss/index.scss', '~/assets/scss/_variables.scss'],
+    css: ['~/assets/css/index.css', '~/assets/css/_colors.css', '~/assets/css/_variables.css'],
     dev: true,
     target: 'static',
     modules: [

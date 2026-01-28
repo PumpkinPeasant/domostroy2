@@ -54,8 +54,6 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_variables";
-
 section {
   padding: 0;
 

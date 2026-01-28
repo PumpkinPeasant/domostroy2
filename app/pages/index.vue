@@ -19,12 +19,10 @@ import ContactsSection from "~/components/index/ContactsSection.vue";
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_variables";
-
 .section{
   padding-top: 95px;
 
-  @media (max-width: map-get($grid-breakpoints, md)) {
+  @media (max-width: 768px) {
     padding-top: 90px;
   }
 }

@@ -50,8 +50,6 @@ const benefits = ref([
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_variables";
-
 .benefits-section {
   display: flex;
   justify-content: center;
@@ -68,18 +66,18 @@ const benefits = ref([
     align-items: center;
     padding: 25px 50px;
 
-    @media (max-width: map-get($grid-breakpoints, xl)) {
+    @media (max-width: 1200px) {
       padding: 25px 15px;
     }
 
-    @media (max-width: map-get($grid-breakpoints, md)) {
+    @media (max-width: 768px) {
       top: -3em;
     }
 
     .items {
       display: flex;
       gap: 3em;
-      @media (max-width: map-get($grid-breakpoints, md)) {
+      @media (max-width: 768px) {
         flex-direction: column;
         gap: 1.5em;
       }
@@ -87,7 +85,7 @@ const benefits = ref([
       .item {
         flex-grow: 1;
         flex-basis: 0;
-        @media (max-width: map-get($grid-breakpoints, md)) {
+        @media (max-width: 768px) {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -98,7 +96,7 @@ const benefits = ref([
           height: 80px;
           width: 80px;
           margin-bottom: 15px;
-          @media (max-width: map-get($grid-breakpoints, md)) {
+          @media (max-width: 768px) {
             margin: 0 15px 0 0;
             height: 50px;
             width: 50px;
