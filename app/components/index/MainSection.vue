@@ -52,12 +52,6 @@ main {
   gap: 3em;
 }
 
-@media (min-width: 1400px) {
-  main {
-    justify-content: flex-end;
-  }
-}
-
 @media (max-width: 992px) {
   main {
     height: unset;
