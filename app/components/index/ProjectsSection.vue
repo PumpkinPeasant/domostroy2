@@ -91,7 +91,6 @@ const projects = ref([
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_colors";
 @import "assets/scss/_variables";
 
 section {
@@ -106,7 +105,7 @@ section::after {
   bottom: 0;
   left: 0;
   right: 0;
-  background: $dark-primary;
+  background: var(--clr-neutral-800);
 }
 
 .section-header {
@@ -172,7 +171,7 @@ section::after {
     }
 
     .card-info {
-      background: $surface;
+      background: var(--clr-neutral-100);
       padding: 15px 20px;
 
       .card-info_title {
@@ -189,7 +188,7 @@ section::after {
         }
 
         .card-info_text {
-          color: $grey-secondary-darker;
+          color: var(--clr-neutral-600);
         }
       }
 
@@ -217,7 +216,7 @@ section::after {
   }
 }
 .price_star {
-  color: #77797D;
+  color: var(--clr-neutral-500);
   font-weight: normal;
   font-size: 16px;
 }

@@ -42,7 +42,6 @@
 
 <style scoped lang="scss">
 @import "assets/scss/_variables";
-@import "assets/scss/_colors";
 
 main {
   position: relative;
@@ -74,7 +73,7 @@ main {
 
   p {
     margin-bottom: 30px;
-    color: $grey-secondary-darker;
+    color: var(--clr-neutral-600);
     font-weight: 600;
 
     @media (max-width: map-get($grid-breakpoints, md)) {
@@ -103,17 +102,17 @@ h1 {
     font-weight: 700;
 
     .digits {
-      color: $dark-primary;
+      color: var(--clr-neutral-800);
       letter-spacing: -1.5px;
     }
 
     .symbol {
-      color: $red-accent;
+      color: var(--clr-accent-500);
       margin-left: 2px;
     }
 
     .description {
-      color: $grey-secondary;
+      color: var(--clr-neutral-500);
       font-size: var(--fs-body);
       @media (max-width: map-get($grid-breakpoints, md)) {
 

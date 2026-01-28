@@ -1,5 +1,4 @@
 @import "assets/scss/_variables";
-@import "assets/scss/_colors";
 
 /* CSS Reset */
 
@@ -31,7 +30,7 @@ html:focus-within {
 body, html {
   height: 100%;
   font-size: var(--base-fs);
-  background: var($background);
+  background: var(var(--clr-neutral-200));
 }
 
 a:not([class]) {
@@ -51,7 +50,7 @@ img, svg {
 /* CSS Reset */
 
 body {
-  background-color: #FEFEFF;
+  background-color: var(--clr-neutral-200);
   font-family: 'Open Sans', serif;
 }
 
@@ -97,13 +96,13 @@ h3 {
 .h-capture {
   font-size: var(--fs-h-capture);
   font-weight: 700;
-  color: $dark-primary;
+  color: var(--clr-neutral-800);
   margin-bottom: 8px;
 }
 
 .heading-description {
   font-size: var(--fs-h-capture);
-  color: $grey-secondary;
+  color: var(--clr-neutral-500);
   font-weight: 500;
 }
 
@@ -124,32 +123,32 @@ button:active {
 
 
 .button-primary {
-  background-color: $dark-primary;
-  color: $white;
+  background-color: var(--clr-neutral-800);
+  color: var(--clr-neutral-100);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   &:hover, &:active{
-    outline: 2px solid $dark-primary;
+    outline: 2px solid var(--clr-neutral-800);
   }
 }
 
 .button-secondary {
-  background-color: $red-background;
-  color: $red-accent;
+  background-color: var(--clr-accent-400);
+  color: var(--clr-accent-500);
   cursor: pointer;
   font-weight: bold;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   &:hover, &:active{
-    outline: 2px solid $red-accent;
+    outline: 2px solid var(--clr-accent-500);
     background: none;
   }
 }
 
 .p-body {
   font-size: var(--fs-body);
-  color: $grey-secondary;
+  color: var(--clr-neutral-500);
 }
 
 .card-shadow {
@@ -160,7 +159,7 @@ button:active {
 .link {
   transition: font-weight 0.2s ease;
   &:hover, &:active {
-    color: #282A2EFF !important;
+    color: var(--clr-neutral-800) !important;
     font-weight: 600;
   }
 }

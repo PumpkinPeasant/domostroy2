@@ -54,7 +54,6 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_colors";
 @import "assets/scss/_variables";
 
 section {
@@ -126,7 +125,7 @@ section {
 
   p {
     font-size: var(--fs-body);
-    color: $dark-primary;
+    color: var(--clr-neutral-800);
   }
 }
 

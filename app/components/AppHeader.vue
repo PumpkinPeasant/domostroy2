@@ -127,7 +127,6 @@ function handleWidth() {
 
 <style scoped lang="scss">
 @import "assets/scss/_variables";
-@import "assets/scss/_colors";
 
 header {
   width: 100%;
@@ -151,17 +150,17 @@ header {
     &-item {
       cursor: pointer;
       font-size: 16px;
-      color: $grey-secondary;
+      color: var(--clr-neutral-500);
       transition: font-weight 0.2s ease;
 
       &:hover, &:active {
-        color: $dark-primary;
+        color: var(--clr-neutral-800);
       }
     }
   }
 
   .active {
-    color: $dark-primary;
+    color: var(--clr-neutral-800);
     font-weight: 600;
   }
 
@@ -186,7 +185,7 @@ header {
 .nav-scrolled {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: $background;
+  background-color: var(--clr-neutral-200);
 
   @media (max-width: map-get($grid-breakpoints, md)) {
     padding-top: 1.25rem;
@@ -225,7 +224,7 @@ header {
   right: 0;
   top: 0;
   left: 0;
-  background: $white;
+  background: var(--clr-neutral-100);
 
   .sidebar-header {
     display: flex;
@@ -238,14 +237,14 @@ header {
   cursor: pointer;
 
   svg {
-    color: #282A2E;
+    color: var(--clr-neutral-800);
     height: 20px;
     transform: rotate(180deg);
   }
 }
 
 .sidebar_menu {
-  color: $dark-primary;
+  color: var(--clr-neutral-800);
   font-size: 19px;
   margin: 15px 0;
   text-align: center;

@@ -32,15 +32,13 @@ const slides = [
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_colors";
-
 h2 {
-  color: $white;
+  color: var(--clr-neutral-100);
   margin-bottom: 20px;
 }
 
 .mortgage {
-  background-color: $dark-primary;
+  background-color: var(--clr-neutral-800);
   position: relative;
   padding: 20px 0;
 }

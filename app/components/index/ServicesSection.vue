@@ -19,7 +19,7 @@
           class="card"
       >
         <div>
-<!--          TODO: Добавить ширину и высоту-->
+          <!--          TODO: Добавить ширину и высоту-->
           <nuxt-img width="" height="" :src="service.image" :alt="service.alt"/>
           <div class="card-info">
             <div class="card-info_title">
@@ -73,7 +73,6 @@ const services = ref([
 </script>
 
 <style scoped lang="scss">
-@import "assets/scss/_colors";
 @import "assets/scss/_variables";
 
 .section-header {
@@ -135,6 +134,7 @@ const services = ref([
     @media (max-width: 1300px) {
       max-width: 400px;
     }
+
     img {
     }
 
@@ -155,7 +155,7 @@ const services = ref([
 
       .card-info_description {
         p {
-          color: $grey-secondary-darker;
+          color: var(--clr-neutral-600);
           margin-bottom: 1em;
         }
       }
@@ -175,8 +175,9 @@ const services = ref([
     }
   }
 }
+
 .price_star {
-  color: #77797D;
+  color: var(--clr-neutral-500);
   font-weight: normal;
   font-size: 16px;
 }

@@ -70,16 +70,16 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 
 .text {
   font-size: 16px;
-  color: #77797DFF;
+  color: var(--clr-neutral-500);
 }
 
 .email {
-  color: #282A2EFF;
+  color: var(--clr-neutral-800);
 }
 
 .footer-logo {
   height: 40px;
-  background-color: #282A2EFF;
+  background-color: var(--clr-neutral-800);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -87,7 +87,7 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
   margin-top: 20px;
 }
 .price_star {
-  color: #77797D;
+  color: var(--clr-neutral-500);
   font-weight: normal;
   font-size: 12px;
   text-align: center;

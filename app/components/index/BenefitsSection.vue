@@ -51,7 +51,6 @@ const benefits = ref([
 
 <style scoped lang="scss">
 @import "assets/scss/_variables";
-@import "assets/scss/_colors";
 
 .benefits-section {
   display: flex;
@@ -62,7 +61,7 @@ const benefits = ref([
 
   .benefits-card {
     position: relative;
-    background: $surface;
+    background: var(--clr-neutral-100);
     top: -6em;
     display: flex;
     flex-direction: column;

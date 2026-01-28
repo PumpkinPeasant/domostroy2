@@ -24,7 +24,6 @@ const behaviors = ref<BehaviorType[]>(['drag', 'pinchZoom', 'dblClick', 'oneFing
 </script>
 
 <style lang="scss">
-@import "assets/scss/_colors";
 @import "assets/scss/_variables";
 
 .yandex-container {
