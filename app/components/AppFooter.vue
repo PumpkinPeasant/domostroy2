@@ -35,7 +35,7 @@ import VK from "~~/public/icons/vk.svg";
 import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .footer-info {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 1fr;

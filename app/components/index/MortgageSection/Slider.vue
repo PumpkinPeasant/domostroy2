@@ -40,6 +40,7 @@ const props = defineProps({
 
 
 const active = ref(1)
+
 function jump(index) {
   active.value = index
 }
@@ -53,9 +54,7 @@ function move(amount) {
 }
 </script>
 
-<style scoped lang="scss">
-$primary: #221e21;
-
+<style scoped>
 .slider {
   position: relative;
   display: flex;
@@ -68,40 +67,43 @@ $primary: #221e21;
   align-items: center;
   justify-content: center;
   font-weight: bold;
+}
 
-  @media (min-width: 600px) {
+@media (min-width: 600px) {
+  .slides {
     font-size: 80px;
-  }
-
-  @media (min-width: 900px) {
-    font-size: 140px;
-  }
-
-  .animated {
-    transition: all 400ms;
-    position: absolute;
-    transform: translate(-50%, -50%);
-  }
-
-  .slide-in {
-    opacity: 0;
-    transform: translate(-40%, -50%);
-  }
-
-  .slide-in-active {
-    transition-delay: 150ms;
-  }
-
-  .slide-out {
-    opacity: 1;
-  }
-
-  .slide-out-active {
-    opacity: 0;
-    transform: translate(-60%, -50%);
   }
 }
 
+@media (min-width: 900px) {
+  .slides {
+    font-size: 140px;
+  }
+}
+
+.slides .animated {
+  transition: all 400ms;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.slides .slide-in {
+  opacity: 0;
+  transform: translate(-40%, -50%);
+}
+
+.slides .slide-in-active {
+  transition-delay: 150ms;
+}
+
+.slides .slide-out {
+  opacity: 1;
+}
+
+.slides .slide-out-active {
+  opacity: 0;
+  transform: translate(-60%, -50%);
+}
 
 .prev,
 .next {
@@ -120,40 +122,59 @@ $primary: #221e21;
   display: flex;
   align-items: center;
   justify-content: center;
+}
 
-  @media (max-width: 992px) {
+@media (max-width: 992px) {
+  .prev,
+  .next {
     background: white;
     width: 30px;
     height: 30px;
   }
+}
 
-  @media (max-width: 576px) {
+@media (max-width: 576px) {
+  .prev,
+  .next {
     width: 25px;
     height: 25px;
     top: 45%;
   }
+}
 
-  svg {
-    height: 20px;
-    color: #fff;
+.prev svg,
+.next svg {
+  height: 20px;
+  color: #fff;
+}
 
-    @media (max-width: 992px) {
-      color: black;
-    }
-
-    @media (max-width: 576px) {
-      height: 15px;
-    }
+@media (max-width: 992px) {
+  .prev svg,
+  .next svg {
+    color: black;
   }
+}
 
-  &:hover, &:active {
-    background: white;
-    color: #fff;
-
-    svg{
-      color: black;
-    }
+@media (max-width: 576px) {
+  .prev svg,
+  .next svg {
+    height: 15px;
   }
+}
+
+.prev:hover,
+.prev:active,
+.next:hover,
+.next:active {
+  background: white;
+  color: #fff;
+}
+
+.prev:hover svg,
+.prev:active svg,
+.next:hover svg,
+.next:active svg {
+  color: black;
 }
 
 .next {
@@ -163,66 +184,78 @@ $primary: #221e21;
   margin-right: calc(var(--section-y-padding) / 2);
   text-indent: 2px;
   padding-left: 2px;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .next {
     transform: translateY(-50%);
     margin-right: 10px;
   }
+}
 
-  &:hover, &:active {
-    transform: translateY(-50%) scale(1.2) translateX(50%);
+.next:hover,
+.next:active {
+  transform: translateY(-50%) scale(1.2) translateX(50%);
+}
 
-    @media (max-width: 768px) {
-      transform: translateY(-50%) scale(1.2);
-    }
+@media (max-width: 768px) {
+  .next:hover,
+  .next:active {
+    transform: translateY(-50%) scale(1.2);
   }
+}
 
-  svg{
-    transform: rotate(180deg);
-  }
+.next svg {
+  transform: rotate(180deg);
 }
 
 .prev {
   left: 0;
   transform: translateY(-50%) translateX(-50%);
   margin-right: auto;
-  margin-left: calc(var(--section-y-padding) / 2);;
+  margin-left: calc(var(--section-y-padding) / 2);
   text-indent: 2px;
   padding-right: 3px;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .prev {
     transform: translateY(-50%);
     margin-left: 10px;
   }
+}
 
-  &:hover, &:active {
-    transform: translateY(-50%) scale(1.2) translateX(-50%);
+.prev:hover,
+.prev:active {
+  transform: translateY(-50%) scale(1.2) translateX(-50%);
+}
 
-    @media (max-width: 768px) {
-      transform: translateY(-50%) scale(1.2);
-    }
+@media (max-width: 768px) {
+  .prev:hover,
+  .prev:active {
+    transform: translateY(-50%) scale(1.2);
   }
 }
 
 .dots {
   text-align: center;
   padding-top: 20px;
+}
 
-  li {
-    width: 6px;
-    height: 6px;
-    border-radius: 3px;
-    background: white;
-    opacity: 0.2;
-    display: inline-block;
-    margin: 0 3px;
-    cursor: pointer;
-    transition: opacity 0.4s ease-in-out, width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.dots li {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: white;
+  opacity: 0.2;
+  display: inline-block;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: opacity 0.4s ease-in-out, width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-    &.active {
-      width: 22px;
-      opacity: 1;
-    }
-  }
+.dots li.active {
+  width: 22px;
+  opacity: 1;
 }
 </style>

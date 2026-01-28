@@ -72,7 +72,7 @@ const services = ref([
 ])
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .section-header {
   display: flex;
   flex-direction: row;
@@ -80,37 +80,38 @@ const services = ref([
   gap: 50px;
   align-items: center;
   margin-bottom: 25px;
+}
 
-  @media (max-width: 992px) {
+@media (max-width: 992px) {
+  .section-header {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-auto-rows: auto auto;
     gap: 1em;
   }
+}
 
+.section-header h2 {
+  white-space: nowrap;
+}
 
-  h2 {
-    white-space: nowrap;
+@media (max-width: 992px) {
+  .section-header p {
+    grid-row: 2/3;
+    grid-column: 1/3;
   }
+}
 
-  p {
-    @media (max-width: 992px) {
-      grid-row: 2/3;
-      grid-column: 1/3;
-    }
-  }
+.section-header button {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-  button {
-    white-space: nowrap;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    img {
-      margin-left: 15px;
-      margin-top: 2px;
-    }
-  }
+.section-header button img {
+  margin-left: 15px;
+  margin-top: 2px;
 }
 
 .cards-container {
@@ -118,60 +119,61 @@ const services = ref([
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
-  @media (max-width: 1200px) {
+}
+
+@media (max-width: 1200px) {
+  .cards-container {
     flex-direction: column;
     align-items: center;
   }
+}
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-    flex-basis: 0;
-    @media (max-width: 1300px) {
-      max-width: 400px;
-    }
+.cards-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-basis: 0;
+}
 
-    img {
-    }
-
-    .card-info {
-      padding: 15px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      .card-info_title {
-        margin-bottom: 10px;
-
-        p {
-          font-size: 18px;
-          font-weight: bold;
-        }
-      }
-
-      .card-info_description {
-        p {
-          color: var(--clr-neutral-600);
-          margin-bottom: 1em;
-        }
-      }
-    }
-
-    .card-info_action {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-
-      p {
-        font-size: 20px;
-        color: black;
-        font-weight: bold;
-      }
-    }
+@media (max-width: 1300px) {
+  .cards-container .card {
+    max-width: 400px;
   }
+}
+
+.cards-container .card .card-info {
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cards-container .card .card-info .card-info_title {
+  margin-bottom: 10px;
+}
+
+.cards-container .card .card-info .card-info_title p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cards-container .card .card-info .card-info_description p {
+  color: var(--clr-neutral-600);
+  margin-bottom: 1em;
+}
+
+.cards-container .card .card-info_action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards-container .card .card-info_action p {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
 }
 
 .price_star {

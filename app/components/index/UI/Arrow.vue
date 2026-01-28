@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <svg class="icon-color" width="36" height="64" viewBox="0 0 36 64" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -10,7 +6,7 @@
   </svg>
 </template>
 
-<style lang="scss">
+<style>
 .icon-color{
   color: currentColor;
 }

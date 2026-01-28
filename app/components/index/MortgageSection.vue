@@ -31,7 +31,7 @@ const slides = [
 ]
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 h2 {
   color: var(--clr-neutral-100);
   margin-bottom: 20px;

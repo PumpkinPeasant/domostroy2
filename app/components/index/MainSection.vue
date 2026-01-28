@@ -40,7 +40,7 @@
 
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 main {
   position: relative;
   padding-top: var(--header-height);
@@ -50,12 +50,16 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 3em;
+}
 
-  @media (min-width: 1400px) {
+@media (min-width: 1400px) {
+  main {
     justify-content: flex-end;
   }
+}
 
-  @media (max-width: 992px) {
+@media (max-width: 992px) {
+  main {
     height: unset;
     gap: unset;
     padding-right: 0;
@@ -64,22 +68,28 @@ main {
 
 .main {
   z-index: 2;
+}
 
-  @media (max-width: 1200px) {
+@media (max-width: 1200px) {
+  .main {
     margin-bottom: 11.5rem;
   }
+}
 
-  p {
-    margin-bottom: 30px;
-    color: var(--clr-neutral-600);
-    font-weight: 600;
+.main p {
+  margin-bottom: 30px;
+  color: var(--clr-neutral-600);
+  font-weight: 600;
+}
 
-    @media (max-width: 768px) {
-      width: 90%;
-    }
+@media (max-width: 768px) {
+  .main p {
+    width: 90%;
   }
+}
 
-  @media (max-width: 992px) {
+@media (max-width: 992px) {
+  .main {
     margin-bottom: 0;
   }
 }
@@ -92,41 +102,40 @@ h1 {
   display: flex;
   gap: 3em;
   margin-top: 30px;
+}
 
-  .number {
-    display: flex;
-    flex-direction: column;
-    font-size: 2.66rem;
-    font-weight: 700;
+.numbers .number {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.66rem;
+  font-weight: 700;
+}
 
-    .digits {
-      color: var(--clr-neutral-800);
-      letter-spacing: -1.5px;
-    }
+.numbers .number .digits {
+  color: var(--clr-neutral-800);
+  letter-spacing: -1.5px;
+}
 
-    .symbol {
-      color: var(--clr-accent-500);
-      margin-left: 2px;
-    }
+.numbers .number .symbol {
+  color: var(--clr-accent-500);
+  margin-left: 2px;
+}
 
-    .description {
-      color: var(--clr-neutral-500);
-      font-size: var(--fs-body);
-      @media (max-width: 768px) {
+.numbers .number .description {
+  color: var(--clr-neutral-500);
+  font-size: var(--fs-body);
+}
 
-      }
-    }
+@media (max-width: 768px) {
+  .numbers .number {
+    font-size: 2.33rem;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+  }
 
-    @media (max-width: 768px) {
-      font-size: 2.33rem;
-      flex: 1;
-      align-items: center;
-      text-align: center;
-
-      &:nth-last-child(1) {
-        margin-right: var(--section-y-padding);
-      }
-    }
+  .numbers .number:nth-last-child(1) {
+    margin-right: var(--section-y-padding);
   }
 }
 
@@ -136,11 +145,16 @@ h1 {
   right: 0;
   width: auto;
   height: 80%;
-  @media (max-width: 1200px) {
+}
+
+@media (max-width: 1200px) {
+  .roof-img {
     height: 70%;
   }
+}
 
-  @media (max-width: 992px) {
+@media (max-width: 992px) {
+  .roof-img {
     position: unset;
   }
 }

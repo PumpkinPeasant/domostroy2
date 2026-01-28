@@ -125,7 +125,7 @@ function handleWidth() {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 header {
   width: 100%;
   background-color: transparent;
@@ -135,34 +135,34 @@ header {
   justify-content: space-between;
   transition: 0.6s;
   z-index: 3;
-
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
 
-  .header__menu {
-    &-container {
-      display: flex;
-      gap: 44px;
-    }
+.header__menu-container {
+  display: flex;
+  gap: 44px;
+}
 
-    &-item {
-      cursor: pointer;
-      font-size: 16px;
-      color: var(--clr-neutral-500);
-      transition: font-weight 0.2s ease;
+.header__menu-item {
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--clr-neutral-500);
+  transition: font-weight 0.2s ease;
+}
 
-      &:hover, &:active {
-        color: var(--clr-neutral-800);
-      }
-    }
-  }
+.header__menu-item:hover,
+.header__menu-item:active {
+  color: var(--clr-neutral-800);
+}
 
-  .active {
-    color: var(--clr-neutral-800);
-    font-weight: 600;
-  }
+header .active {
+  color: var(--clr-neutral-800);
+  font-weight: 600;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  header {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
@@ -184,8 +184,10 @@ header {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-color: var(--clr-neutral-200);
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .nav-scrolled {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
@@ -198,10 +200,10 @@ header {
   align-items: center;
   padding: 12px 30px;
   font-size: 16px;
+}
 
-  img {
-    margin-right: 10px;
-  }
+.contact_section img {
+  margin-right: 10px;
 }
 
 .menu {
@@ -223,22 +225,22 @@ header {
   top: 0;
   left: 0;
   background: var(--clr-neutral-100);
+}
 
-  .sidebar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.sidebar .sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .menu_icon {
   cursor: pointer;
+}
 
-  svg {
-    color: var(--clr-neutral-800);
-    height: 20px;
-    transform: rotate(180deg);
-  }
+.menu_icon svg {
+  color: var(--clr-neutral-800);
+  height: 20px;
+  transform: rotate(180deg);
 }
 
 .sidebar_menu {
@@ -250,7 +252,8 @@ header {
   flex-direction: column;
 }
 
-.nested-enter-active, .nested-leave-active {
+.nested-enter-active,
+.nested-leave-active {
   transition: all 0.3s ease-in-out;
 }
 

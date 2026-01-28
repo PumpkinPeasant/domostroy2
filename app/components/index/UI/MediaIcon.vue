@@ -19,20 +19,21 @@ const props = defineProps({
   </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .icon {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: end;
+}
 
-  .icon-link {
-    transform-origin: center center;
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.icon .icon-link {
+  transform-origin: center center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-    &:hover, &:active {
-      transform: scale(1.2);
-    }
-  }
+.icon .icon-link:hover,
+.icon .icon-link:active {
+  transform: scale(1.2);
 }
 </style>

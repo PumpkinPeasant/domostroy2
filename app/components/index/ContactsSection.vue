@@ -53,14 +53,14 @@ import MediaIcon from "~/components/index/UI/MediaIcon.vue";
 
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 section {
   padding: 0;
+}
 
-  h2 {
-    padding: 0 var(--section-y-padding);
-    margin-bottom: 16px;
-  }
+section h2 {
+  padding: 0 var(--section-y-padding);
+  margin-bottom: 16px;
 }
 
 .map_wrapper {
@@ -78,8 +78,10 @@ section {
   right: var(--section-y-padding);
   top: 50%;
   transform: translateY(-50%);
+}
 
-  @media (max-width: 900px) {
+@media (max-width: 900px) {
+  .card {
     position: relative;
     width: unset;
     max-width: unset;
@@ -89,10 +91,10 @@ section {
     margin: 0 var(--section-y-padding);
     padding: 16px 20px;
   }
+}
 
-  .card-contact {
-    margin-bottom: 1em;
-  }
+.card .card-contact {
+  margin-bottom: 1em;
 }
 
 .main-title {
@@ -110,21 +112,23 @@ section {
   flex-direction: row;
   align-items: center;
   margin-bottom: 18px;
+}
 
-  img {
-    margin-right: 15px;
-    width: 25px;
+.card_element img {
+  margin-right: 15px;
+  width: 25px;
+}
 
-    @media (max-width: 900px) {
-      width: 18px;
-      margin-right: 8px;
-    }
+@media (max-width: 900px) {
+  .card_element img {
+    width: 18px;
+    margin-right: 8px;
   }
+}
 
-  p {
-    font-size: var(--fs-body);
-    color: var(--clr-neutral-800);
-  }
+.card_element p {
+  font-size: var(--fs-body);
+  color: var(--clr-neutral-800);
 }
 
 .icons {
@@ -133,13 +137,16 @@ section {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  @media (max-width: 900px) {
+}
+
+@media (max-width: 900px) {
+  .icons {
     justify-content: flex-start;
     gap: 10px;
+  }
 
-    .icon {
-      width: 35px;
-    }
+  .icons .icon {
+    width: 35px;
   }
 }
 </style>

@@ -49,66 +49,79 @@ const benefits = ref([
 
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .benefits-section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
   min-height: 100%;
+}
 
-  .benefits-card {
-    position: relative;
-    background: var(--clr-neutral-100);
-    top: -6em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 50px;
+.benefits-section .benefits-card {
+  position: relative;
+  background: var(--clr-neutral-100);
+  top: -6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 50px;
+}
 
-    @media (max-width: 1200px) {
-      padding: 25px 15px;
-    }
-
-    @media (max-width: 768px) {
-      top: -3em;
-    }
-
-    .items {
-      display: flex;
-      gap: 3em;
-      @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 1.5em;
-      }
-
-      .item {
-        flex-grow: 1;
-        flex-basis: 0;
-        @media (max-width: 768px) {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .icon {
-          height: 80px;
-          width: 80px;
-          margin-bottom: 15px;
-          @media (max-width: 768px) {
-            margin: 0 15px 0 0;
-            height: 50px;
-            width: 50px;
-          }
-        }
-      }
-    }
-
-    h3 {
-      margin-bottom: 0.8em;
-      letter-spacing: -0.8px;
-    }
+@media (max-width: 1200px) {
+  .benefits-section .benefits-card {
+    padding: 25px 15px;
   }
+}
+
+@media (max-width: 768px) {
+  .benefits-section .benefits-card {
+    top: -3em;
+  }
+}
+
+.benefits-section .benefits-card .items {
+  display: flex;
+  gap: 3em;
+}
+
+@media (max-width: 768px) {
+  .benefits-section .benefits-card .items {
+    flex-direction: column;
+    gap: 1.5em;
+  }
+}
+
+.benefits-section .benefits-card .items .item {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+@media (max-width: 768px) {
+  .benefits-section .benefits-card .items .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.benefits-section .benefits-card .items .item .icon {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .benefits-section .benefits-card .items .item .icon {
+    margin: 0 15px 0 0;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.benefits-section .benefits-card h3 {
+  margin-bottom: 0.8em;
+  letter-spacing: -0.8px;
 }
 </style>

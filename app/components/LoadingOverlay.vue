@@ -26,13 +26,13 @@ onMounted(() => {
     opacity: 0,
     y: -60,
   })
-  setTimeout(()=>{
+  setTimeout(() => {
     enableScroll()
-  },2000)
+  }, 2000)
 })
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .overlay {
   z-index: 1005;
   position: fixed;
@@ -40,30 +40,34 @@ onMounted(() => {
   height: 100%;
   background: linear-gradient(to top, rgba(173, 232, 246, 0.3), rgba(255, 255, 255, 0)), #fff;
   top: 0;
+}
 
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
   .logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 36px;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
+    font-size: 26px;
+  }
+}
 
-    img {
-      width: 70px;
-      margin-right: 16px;
+.logo img {
+  width: 70px;
+  margin-right: 16px;
+}
 
-      @media (max-width: 768px) {
-        width: 55px;
-        margin-right: 8px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      font-size: 26px;
-    }
+@media (max-width: 768px) {
+  .logo img {
+    width: 55px;
+    margin-right: 8px;
   }
 }
 </style>

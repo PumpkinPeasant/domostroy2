@@ -1,7 +1,7 @@
 <template>
   <LoadingOverlay/>
   <MainSection id="top"/>
-  <BenefitsSection />
+  <BenefitsSection/>
   <ProjectsSection id="projects"/>
   <MortgageSection id="mortgage" class="section"/>
   <ServicesSection id="services" class="section"/>
@@ -9,7 +9,6 @@
 </template>
 
 <script setup>
-
 import BenefitsSection from "~/components/index/BenefitsSection.vue";
 import MainSection from "~/components/index/MainSection.vue";
 import ServicesSection from "~/components/index/ServicesSection.vue";
@@ -18,11 +17,13 @@ import MortgageSection from "~/components/index/MortgageSection.vue";
 import ContactsSection from "~/components/index/ContactsSection.vue";
 </script>
 
-<style scoped lang="scss">
-.section{
+<style scoped>
+.section {
   padding-top: 95px;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .section {
     padding-top: 90px;
   }
 }

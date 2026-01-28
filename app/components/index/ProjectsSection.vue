@@ -90,7 +90,7 @@ const projects = ref([
 ])
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 section {
   position: relative;
 }
@@ -113,35 +113,38 @@ section::after {
   gap: 50px;
   align-items: center;
   margin-bottom: 25px;
-  @media (max-width: 992px) {
+}
+
+@media (max-width: 992px) {
+  .section-header {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-auto-rows: auto auto;
     gap: 1em;
   }
+}
 
-  h2 {
-    white-space: nowrap;
+.section-header h2 {
+  white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+  .section-header p {
+    grid-row: 2/3;
+    grid-column: 1/3;
   }
+}
 
-  p {
-    @media (max-width: 992px) {
-      grid-row: 2/3;
-      grid-column: 1/3;
-    }
-  }
+.section-header button {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-  button {
-    white-space: nowrap;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    img {
-      margin-left: 15px;
-      margin-top: 2px;
-    }
-  }
+.section-header button img {
+  margin-left: 15px;
+  margin-top: 2px;
 }
 
 .cards-container {
@@ -150,69 +153,74 @@ section::after {
   justify-content: space-between;
   gap: 40px;
   align-items: center;
-  @media (max-width: 1300px) {
+}
+
+@media (max-width: 1300px) {
+  .cards-container {
     flex-direction: column;
     align-items: center;
   }
+}
 
-  .card {
-    flex-grow: 1;
-    flex-basis: 0;
-    box-shadow: 0 11px 44px 16px rgba(14, 48, 114, .05);
+.cards-container .card {
+  flex-grow: 1;
+  flex-basis: 0;
+  box-shadow: 0 11px 44px 16px rgba(14, 48, 114, .05);
+}
 
-    @media (max-width: 1300px) {
-      max-width: 400px;
-    }
-
-    img {
-      object-fit: cover;
-    }
-
-    .card-info {
-      background: var(--clr-neutral-100);
-      padding: 15px 20px;
-
-      .card-info_title {
-        margin-bottom: 13px;
-      }
-
-      .card-info_element {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        img {
-          margin-right: 5px;
-        }
-
-        .card-info_text {
-          color: var(--clr-neutral-600);
-        }
-      }
-
-      .card-info_item {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 25px;
-      }
-
-      .card-info_action {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        p {
-          font-size: 20px;
-          color: black;
-          font-weight: bold;
-        }
-      }
-
-    }
+@media (max-width: 1300px) {
+  .cards-container .card {
+    max-width: 400px;
   }
 }
+
+.cards-container .card img {
+  object-fit: cover;
+}
+
+.cards-container .card .card-info {
+  background: var(--clr-neutral-100);
+  padding: 15px 20px;
+}
+
+.cards-container .card .card-info .card-info_title {
+  margin-bottom: 13px;
+}
+
+.cards-container .card .card-info .card-info_element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cards-container .card .card-info .card-info_element img {
+  margin-right: 5px;
+}
+
+.cards-container .card .card-info .card-info_element .card-info_text {
+  color: var(--clr-neutral-600);
+}
+
+.cards-container .card .card-info .card-info_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.cards-container .card .card-info .card-info_action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards-container .card .card-info .card-info_action p {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+
 .price_star {
   color: var(--clr-neutral-500);
   font-weight: normal;

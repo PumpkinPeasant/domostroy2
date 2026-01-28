@@ -15,7 +15,7 @@
 </template>
 <script setup lang="ts">
 import {YandexMap, YandexMarker} from 'vue-yandex-maps'
-import type { BehaviorType } from '@yandex/ymaps3-types';
+import type {BehaviorType} from '@yandex/ymaps3-types';
 
 const coordinates = [64.577881, 39.869418];
 const controls = ["zoomControl", "geolocationControl"];
@@ -23,11 +23,13 @@ const behaviors = ref<BehaviorType[]>(['drag', 'pinchZoom', 'dblClick', 'oneFing
 
 </script>
 
-<style lang="scss">
+<style>
 .yandex-container {
   height: 75vh;
+}
 
-  @media (max-width: 992px) {
+@media (max-width: 992px) {
+  .yandex-container {
     height: 50vh;
   }
 }
