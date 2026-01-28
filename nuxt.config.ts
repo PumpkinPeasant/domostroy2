@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-    // @ts-ignore
     css: ['~/assets/css/index.css', '~/assets/css/_colors.css', '~/assets/css/_variables.css'],
     dev: true,
     target: 'static',
@@ -20,18 +19,23 @@ export default defineNuxtConfig({
     ],
     app: {
         head: {
-            title: 'Домострой | Каркасное строительство',
+            title: 'Строительство домов под ключ в Северодвинске и Архангельской области | «Домострой»',
             meta: [
                 {
                     name: 'description',
-                    content: 'Каркасное строительство домов в Северодвинске.'
+                    content: 'Строительство загородных домов в Северодвинске и Архангельской области под ключ. Компания «Домострой» специализируется на на проектировании и строительстве частных домов и коттеджей.'
+                },
+                {
+                    name: 'og:description',
+                    content: 'Строительство загородных домов в Северодвинске и Архангельской области под ключ. Компания «Домострой» специализируется на на проектировании и строительстве частных домов и коттеджей.'
                 }
             ],
             link: [
                 {
                     rel: 'icon',
                     type: 'image/x-icon',
-                    href: '/favicon.ico'},
+                    href: '/favicon.ico'
+                },
                 {
                     rel: 'preconnect',
                     href: 'https://fonts.googleapis.com'
@@ -39,10 +43,6 @@ export default defineNuxtConfig({
                 {
                     rel: 'preconnect',
                     href: 'https://fonts.gstatic.com'
-                },
-                {
-                    rel: 'stylesheet',
-                    href: 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'
                 },
                 {
                     rel: 'stylesheet',
@@ -56,7 +56,7 @@ export default defineNuxtConfig({
         postcss: {
             plugins: {
                 'postcss-preset-env': {
-                    autoprefixer: { grid: true },
+                    autoprefixer: {grid: true},
                     stage: 3,
                     features: {
                         'nesting-rules': true

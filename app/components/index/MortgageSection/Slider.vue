@@ -7,7 +7,7 @@
           :key="index">
         <a :href="slide.href" target="_blank">
           <!--          TODO: Добавить ширину и высоту-->
-          <nuxt-img :src="slide.img" :alt="slide.alt"/>
+          <nuxt-img :src="slide.img" :alt="slide.alt" loading="lazy"/>
         </a>
       </div>
     </div>
